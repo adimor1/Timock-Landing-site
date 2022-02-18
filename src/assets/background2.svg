@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg preserveAspectRatio="none" version="1.1" viewBox="0 0 1440 560" xmlns="http://www.w3.org/2000/svg" opacity= "0.45">
+<g fill="rgba(45, 204, 210, 1)" mask="url(#a)">
+<path d="m0 60c144 38 432 183.6 720 190s576-126.4 720-158v468h-1440z" />
+<path d="m0 295c96 53 288 254.2 480 265s288-186 480-211 384 68.8 480 86v125h-1440z"/>
+</g>
+<defs>
+<mask id="a">
+<rect width="1440" height="560" fill="#fff" />
+</mask>
+</defs>
+</svg>

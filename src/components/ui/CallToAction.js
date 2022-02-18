@@ -3,8 +3,8 @@ import { Button, Typography } from '@material-ui/core';
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Grid from '@material-ui/core/Grid'
 import ButtonArrow from "./ButtonArrow";
-import backgoround from '../../assets/background.jpg';
-import mobileBackground from '../../assets/mobileBackground.jpg';
+import backgoround from '../../assets/map4.png';
+import mobileBackground from '../../assets/map4.png';
 import { useMediaQuery } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
@@ -22,7 +22,7 @@ const useStyle=makeStyles(theme=>({
         backgroundPosition:"center",
         backgroundSize:"cover",
         backgroundRepeat:"no-repeat",
-        height:"60em",
+        height:"70em",
         width:"100%",
         backgroundAttachment:"fixed",
         [theme.breakpoints.down("md")]:{
@@ -55,6 +55,7 @@ export default function CallToAction(props){
     const matchesSM = useMediaQuery(theme.breakpoints.down("sm")); 
 
     return <Grid 
+    
     container 
     alignItems="center" 
     justify={matchesSM ? "center": "space-between"} 

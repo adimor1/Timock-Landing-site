@@ -44,15 +44,6 @@ const useStyle = makeStyles(theme => ({
             marginBottoms: "1em"
         }
     },
-    logo: {
-        height: "8em",
-        [theme.breakpoints.down("md")]: {
-            height: "7em"
-        },
-        [theme.breakpoints.down('xs')]: {
-            height: "5.5em"
-        }
-    },
     logoContainer: {
         padding: 0,
         "&:hover": {
@@ -60,19 +51,24 @@ const useStyle = makeStyles(theme => ({
         }
     },
     tabContainer: {
-        marginLeft: 'auto'
+        marginLeft: 'auto',
+        marginTop:"2em",
     },
     tab: {
         ...theme.typography.tab,
         minWidth: 10,
-        marginLeft: "25px"
+        marginLeft: "25px",
+        fontSize: "30px",
+                
     },
     button: {
         ...theme.typography.estimate,
         borderRadius: "50px",
-        marginLeft: "50px",
+        marginLeft: "80px",
+        marginTop:"1em",
         marginRight: "25px",
-        height: "45px",
+        fontSize:"30px",
+
         "&:hover":{
             backgroundColor:theme.palette.secondary.light
           }
@@ -119,7 +115,10 @@ const useStyle = makeStyles(theme => ({
         }
     },
     appbar: {
-        zIndex: theme.zIndex.modal + 1
+        zIndex: theme.zIndex.modal + 1,
+        height:"9em",
+        centerTitle: true,
+
     }
 }))
 
@@ -335,13 +334,10 @@ export default function Header(props) {
     return (
         <React.Fragment>
             <ElevationScroll>
-                <AppBar position="fixed" className={classes.appbar}>
+                <AppBar position="fixed" className={classes.appbar} color="white">
                     <Toolbar disableGutters>
                         <Button disableRipple component={Link} to='/' onClick={() => props.setValue(0)} className={classes.logoContainer}>
-                            <img
-                                alt="company logo"
-                                className={classes.logo}
-                                src={logo} />
+                        
                         </Button>
                         {matches ? drawer : tabs}
                     </Toolbar>
