@@ -17,7 +17,7 @@ import {
     useTheme
 } from "@material-ui/core";
 import React, { useEffect, useMemo, useState } from "react";
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/logo.png'
 import { Link } from "react-router-dom";
 import MenuIcon from "@material-ui/icons/Menu";
 
@@ -44,30 +44,41 @@ const useStyle = makeStyles(theme => ({
             marginBottoms: "1em"
         }
     },
+    logo: {
+        height: "3.5em",
+        marginLeft: "1em",
+        marginTop:"1em",
+        [theme.breakpoints.down("md")]: {
+            height: "3em"
+        },
+        [theme.breakpoints.down('xs')]: {
+            height: "3.5em"
+        }
+    },
     logoContainer: {
-        padding: 0,
+
         "&:hover": {
             backgroundColor: "transparent"
         }
     },
     tabContainer: {
         marginLeft: 'auto',
-        marginTop:"2em",
+        marginTop:"1em",
     },
     tab: {
         ...theme.typography.tab,
         minWidth: 10,
-        marginLeft: "25px",
-        fontSize: "30px",
+      
+        marginRight:"1em",
+        fontSize: "25px",
                 
     },
     button: {
         ...theme.typography.estimate,
         borderRadius: "50px",
         marginLeft: "80px",
-        marginTop:"1em",
         marginRight: "25px",
-        fontSize:"30px",
+        fontSize:"25px",
 
         "&:hover":{
             backgroundColor:theme.palette.secondary.light
@@ -115,8 +126,8 @@ const useStyle = makeStyles(theme => ({
         }
     },
     appbar: {
-        zIndex: theme.zIndex.modal + 1,
-        height:"9em",
+        
+        height:"6em",
         centerTitle: true,
 
     }
@@ -229,15 +240,7 @@ export default function Header(props) {
                 ))}
 
             </Tabs>
-            <Button
-                variant="contained"
-                color="secondary"
-                className={classes.button}
-                component={Link}
-                to='/estimate' 
-                onClick={()=>props.setValue(5)}>
-                Free Estimate
-            </Button>
+
             <Menu
                 id="simple-menu"
                 
@@ -337,7 +340,10 @@ export default function Header(props) {
                 <AppBar position="fixed" className={classes.appbar} color="white">
                     <Toolbar disableGutters>
                         <Button disableRipple component={Link} to='/' onClick={() => props.setValue(0)} className={classes.logoContainer}>
-                        
+                        <img
+                                alt="company logo"
+                                className={classes.logo}
+                                src={logo} />
                         </Button>
                         {matches ? drawer : tabs}
                     </Toolbar>

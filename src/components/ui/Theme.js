@@ -1,7 +1,7 @@
 import { createTheme } from "@material-ui/core";
 
 
-const arcBlue = "#2DCCD2";
+const arcBlue = "#3be2ab";
 const arcOrange= "#202124";
 const arcGrey="#868686"
 export default createTheme({
@@ -33,8 +33,8 @@ export default createTheme({
         h2:{
             fontFamily:"Raleway", 
             fontWeight:700, 
-            fontSize: "2.5rem",
-            color: arcBlue,
+            fontSize: "4.5rem",
+            color: "black",
             lineHeight:1.5
         },
         h3:{
@@ -49,7 +49,7 @@ export default createTheme({
             fontWeight: 700
         },
         subtitle1:{
-            fontSize: "1.25rem",
+            fontSize: "2.5rem",
             color: arcGrey,
             fontWeight: 300
         },

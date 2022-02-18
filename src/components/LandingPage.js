@@ -13,7 +13,7 @@ import websiteIcon from '../assets/websiteIcon.svg';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import revolutionBackground from '../assets/background2.svg';
-import infoBackground from '../assets/blue.jpg';
+import infoBackground from '../assets/backgroundbg.png';
 import CallToAction from './ui/CallToAction';
 import { Link } from 'react-router-dom';
 import lightbulb from '../assets/bulb.svg';
@@ -25,6 +25,8 @@ import purple from '../assets/purple.jpg';
 import pink from '../assets/pink.jpg';
 import yellow from '../assets/yellow.jpg';
 import stopwatch from '../assets/stopwatch.svg';
+import website from '../assets/phonecomputer.png';
+import googleplay from '../assets/googleplay.png';
 import FaceIcon from '@mui/icons-material/Face';
 import QrCodeScannerIcon from '@mui/icons-material/QrCodeScanner';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -63,15 +65,7 @@ const useStyle = makeStyles(theme => ({
     height: 45,
     width: 145
   },
-  mainContainer: {
-    marginTop: "5em",
-    [theme.breakpoints.down("md")]: {
-      marginTop: "3em"
-    },
-    [theme.breakpoints.down("xs")]: {
-      marginTop: "2em"
-    }
-  },
+
   heroTextContainer: {
     minWidth: "21.5em",
     marginLeft: "1em",
@@ -143,6 +137,17 @@ const useStyle = makeStyles(theme => ({
   icon2: {
     position: "absolute",
 
+  },
+  image: {
+    height: "100%",
+    width: "100%",
+
+  },
+  image2: {
+    height: "5em",
+    width: "14em",
+marginTop:"1em"
+
   }
 }))
 
@@ -162,21 +167,39 @@ export default function LandingPage(props) {
   };
 
   return (
-    <Grid container direction='column' className={classes.mainContainer}>
+    <Grid container direction='column'>
 
+      {/*welcome*/}
+      <Grid item>
+        <Grid container style={{ height: "40em" }} alignItems="center" direction='row' className={classes.infoBackground}>
+          <Grid item >
+            <img className={classes.image} src={website} alt="lightbulb" />
+          </Grid>
+          <Grid direction='row' align='center' >
+            <Typography variant='h2'  >
+              Time Tracking <br /> For Your Business
+            </Typography>
+            <Typography variant='subtitle1' >
+              Free. Newest Technologies. Friendly.
+            </Typography>
+            <Grid item >
+              <img className={classes.image2} src={googleplay} alt="lightbulb"  />
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
 
-
-      <Grid item container direction='row' justify='center' style={{ marginTop: "15em", marginBottom: "5em" }} >
+      {/*Technologies*/}
+      <Grid item container direction='row' justify='center' style={{ marginTop: "5em", marginBottom: "5em" }} >
         <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "15em" }} >
           <Grid item>
             <Grid container alignItems='center' justify="center">
               <Card className={classes.revolutionCard}>
                 <CardContent>
-                  <img className={classes.icon} src={cash} alt="lightbulb"  />
-                  <FaceIcon className={classes.icon} style={{ fontSize: "10rem"}} />
+                  <img className={classes.icon} src={cash} alt="lightbulb" />
+                  <FaceIcon className={classes.icon} style={{ fontSize: "10rem" }} />
                 </CardContent>
               </Card>
-
             </Grid>
           </Grid>
 
@@ -190,7 +213,6 @@ export default function LandingPage(props) {
                   <QrCodeScannerIcon className={classes.icon} style={{ fontSize: "10rem" }} />
                 </CardContent>
               </Card>
-
             </Grid>
           </Grid>
           <Grid>
@@ -206,7 +228,6 @@ export default function LandingPage(props) {
                   <LocationOnIcon className={classes.icon} style={{ fontSize: "10rem" }} />
                 </CardContent>
               </Card>
-
             </Grid>
           </Grid>
           <Grid>
@@ -222,14 +243,11 @@ export default function LandingPage(props) {
                   <NfcIcon className={classes.icon} style={{ fontSize: "10rem" }} />
                 </CardContent>
               </Card>
-
             </Grid>
           </Grid>
           <Grid>
-
           </Grid>
         </Grid>
-
       </Grid>
 
       <Grid item container direction='row' justify='center' style={{ marginBottom: "20em" }} >
@@ -242,10 +260,8 @@ export default function LandingPage(props) {
                   <WifiIcon className={classes.icon} style={{ fontSize: "10rem" }} />
                 </CardContent>
               </Card>
-
             </Grid>
           </Grid>
-
         </Grid>
         <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "15em" }} >
           <Grid item>
@@ -256,11 +272,9 @@ export default function LandingPage(props) {
                   <ModeEditIcon className={classes.icon} style={{ fontSize: "10rem" }} />
                 </CardContent>
               </Card>
-
             </Grid>
           </Grid>
           <Grid>
-
           </Grid>
         </Grid>
         <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "15em" }} >
@@ -272,16 +286,13 @@ export default function LandingPage(props) {
                   <StyleIcon className={classes.icon} style={{ fontSize: "10rem" }} />
                 </CardContent>
               </Card>
-
             </Grid>
           </Grid>
           <Grid>
-
           </Grid>
         </Grid>
-    
       </Grid>
-
+      {/*End Technologies*/}
     </Grid>
   );
 

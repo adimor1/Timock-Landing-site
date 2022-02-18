@@ -9,7 +9,7 @@ import twitter from '../../assets/twitter.svg'
 
 const useStyles = makeStyles(theme=>({
     footer:{
-        backgroundColor: theme.palette.common.blue,
+        backgroundColor: theme.palette.secondary.main,
         width: "100%",
         zIndex: 1302,
         position:"relative"
