@@ -7,6 +7,7 @@ import Footer from './ui/Footer';
 import LandingPage from './LandingPage';
 import Services from './Services';
 import  CustomSoftware from './CustomSoftware';
+import ReactDOM from "react-dom";
 
 function App() {
   const [selectedIndex, setSelectedIndex]=useState(0); 
@@ -59,5 +60,6 @@ function App() {
     </ThemeProvider>
   );
 }
+
 
 export default App;

@@ -36,7 +36,7 @@ function ElevationScroll(props) {
 const useStyle = makeStyles(theme => ({
     toolbarMargin: {
         ...theme.mixins.toolbar,
-        marginBottom: "3em",
+     
         [theme.breakpoints.down("md")]: {
             marginBottom: "2em"
         },
@@ -336,7 +336,7 @@ export default function Header(props) {
 
     return (
         <React.Fragment>
-            <ElevationScroll>
+          
                 <AppBar position="fixed" className={classes.appbar} color="white">
                     <Toolbar disableGutters>
                         <Button disableRipple component={Link} to='/' onClick={() => props.setValue(0)} className={classes.logoContainer}>
@@ -348,7 +348,7 @@ export default function Header(props) {
                         {matches ? drawer : tabs}
                     </Toolbar>
                 </AppBar>
-            </ElevationScroll>
+    
             <div className={classes.toolbarMargin} />
         </React.Fragment>
     )

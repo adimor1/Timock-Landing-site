@@ -34,6 +34,7 @@ import NfcIcon from '@mui/icons-material/Nfc';
 import WifiIcon from '@mui/icons-material/Wifi';
 import ModeEditIcon from '@mui/icons-material/ModeEdit';
 import StyleIcon from '@mui/icons-material/Style';
+import { animateText, samples } from "react-punch";
 
 const useStyle = makeStyles(theme => ({
   animation: {
@@ -151,7 +152,10 @@ marginTop:"1em"
   }
 }))
 
+
 export default function LandingPage(props) {
+
+
   const classes = useStyle();
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
@@ -167,6 +171,9 @@ export default function LandingPage(props) {
   };
 
   return (
+
+
+
     <Grid container direction='column'>
 
       {/*welcome*/}
@@ -182,6 +189,7 @@ export default function LandingPage(props) {
             <Typography variant='subtitle1' >
               Free. Newest Technologies. Friendly.
             </Typography>
+            
             <Grid item >
               <img className={classes.image2} src={googleplay} alt="lightbulb"  />
             </Grid>
@@ -207,9 +215,9 @@ export default function LandingPage(props) {
         <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "15em" }} >
           <Grid item>
             <Grid container alignItems='center' justify="center">
-              <Card className={classes.revolutionCard}>
+              <Card className={classes.revolutionCard} behavior="slide">
                 <CardContent>
-                  <img className={classes.icon} src={red} alt="lightbulb" justify="center" />
+                  <img className={classes.icon} src={red} alt="lightbulb" justify="center"/>
                   <QrCodeScannerIcon className={classes.icon} style={{ fontSize: "10rem" }} />
                 </CardContent>
               </Card>
