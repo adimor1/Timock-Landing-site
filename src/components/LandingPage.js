@@ -26,6 +26,8 @@ import pink from '../assets/pink.jpg';
 import yellow from '../assets/yellow.jpg';
 import stopwatch from '../assets/stopwatch.svg';
 import website from '../assets/phonecomputer.png';
+import right from '../assets/right-red.png';
+import talk from '../assets/talk.png';
 import googleplay from '../assets/googleplay.png';
 import FaceIcon from '@mui/icons-material/Face';
 import QrCodeScannerIcon from '@mui/icons-material/QrCodeScanner';
@@ -111,15 +113,7 @@ const useStyle = makeStyles(theme => ({
     borderRadius: 15,
     height: "12em",
     width: "12em",
-    [theme.breakpoints.down("sm")]: {
-      paddingTop: "8em",
-      paddingRight: 0,
-      paddingLeft: 0,
-      paddingBottom: "8em",
-      borderRadius: 0,
-      width: "5em",
 
-    }
   },
   infoBackground: {
     backgroundImage: `url(${infoBackground})`,
@@ -147,8 +141,49 @@ const useStyle = makeStyles(theme => ({
   image2: {
     height: "5em",
     width: "14em",
-marginTop:"1em"
+    marginTop: "1em"
 
+  },
+  button: {
+    height: 60,
+    width: 165,
+    borderRadius: "50px",
+    borderWidth: 3,
+
+  },
+  infoBackground2: {
+    backgroundImage: `url(${right})`,
+
+    backgroundSize: "cover",
+    justifyContent: "flex-end",
+    height: "40em",
+    width: "40em",
+    [theme.breakpoints.down("sm")]: {
+      height: "28em",
+      width: "28em",
+    }
+  },
+  image3: {
+    height: "25em",
+    width: "25em",
+
+  },
+  parent: {
+    position: "relative",
+    top: 0,
+    left: 0,
+  },
+  image4: {
+    position: "relative",
+    top: 0,
+    left: 0,
+   
+  },
+  image5: {
+    position: "absolute",
+    top: "30px",
+    left: "30px"
+   
   }
 }))
 
@@ -178,130 +213,188 @@ export default function LandingPage(props) {
 
       {/*welcome*/}
       <Grid item>
-        <Grid container style={{ height: "40em" }} alignItems="center" direction='row' className={classes.infoBackground}>
+        <Grid container style={{ height: "40em" }} alignItems="center" direction='row' className={classes.infoBackground} style={{ marginBottom: "10em", marginTop: "5em" }}>
           <Grid item >
             <img className={classes.image} src={website} alt="lightbulb" />
           </Grid>
-          <Grid direction='row' align='center' >
+          <Grid align='center' >
             <Typography variant='h2'  >
               Time Tracking <br /> For Your Business
             </Typography>
             <Typography variant='subtitle1' >
               Free. Newest Technologies. Friendly.
             </Typography>
-            
-            <Grid item >
-              <img className={classes.image2} src={googleplay} alt="lightbulb"  />
+            <Grid item component={"a"} href="https://play.google.com/store/apps" rel="noopener noreferrer" target="_blank">
+              <img className={classes.image2} src={googleplay} alt="lightbulb" />
             </Grid>
           </Grid>
         </Grid>
       </Grid>
 
       {/*Technologies*/}
-      <Grid item container direction='row' justify='center' style={{ marginTop: "5em", marginBottom: "5em" }} >
-        <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "15em" }} >
-          <Grid item>
-            <Grid container alignItems='center' justify="center">
-              <Card className={classes.revolutionCard}>
-                <CardContent>
-                  <img className={classes.icon} src={cash} alt="lightbulb" />
-                  <FaceIcon className={classes.icon} style={{ fontSize: "10rem" }} />
-                </CardContent>
-              </Card>
+      <Grid >
+        <Grid align='center' style={{ marginTop: "5em" }}  >
+          <Typography variant='h2' >
+            Our Technologies - Your Choice
+          </Typography>
+
+          <Typography variant='subtitle2' >
+            We offer a variety of technologies that do not exist in the market.
+          </Typography>
+          <Typography variant='subtitle2' >
+            These technologies will make it easier for your employees to document their work hours.
+          </Typography>
+          <Typography variant='subtitle2' >
+            <br />
+            You will only have to choose.
+          </Typography>
+        </Grid>
+
+        <Grid item container direction='row' justify='center' style={{ marginTop: "1em", marginBottom: "5em" }} >
+          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "15em" }} >
+            <Grid item>
+              <Grid container alignItems='center' justify="center">
+                <Card className={classes.revolutionCard}>
+                  <CardContent>
+                    <img className={classes.icon} src={cash} alt="lightbulb" style={{ opacity: 0.5 }} />
+                    <FaceIcon className={classes.icon} style={{ fontSize: "10rem" }} />
+                  </CardContent>
+                </Card>
+              </Grid>
+            </Grid>
+
+          </Grid>
+          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "15em" }} >
+            <Grid item>
+              <Grid container alignItems='center' justify="center">
+                <Card className={classes.revolutionCard} >
+                  <CardContent>
+                    <img className={classes.icon} src={red} alt="lightbulb" justify="center" style={{ opacity: 0.5 }} />
+                    <QrCodeScannerIcon className={classes.icon} style={{ fontSize: "10rem" }} />
+                  </CardContent>
+                </Card>
+              </Grid>
+            </Grid>
+            <Grid>
+
+            </Grid>
+          </Grid>
+          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "15em" }} >
+            <Grid item>
+              <Grid container alignItems='center' justify="center">
+                <Card className={classes.revolutionCard}>
+                  <CardContent>
+                    <img className={classes.icon} src={blue} alt="lightbulb" justify="center" style={{ opacity: 0.5 }} />
+                    <LocationOnIcon className={classes.icon} style={{ fontSize: "10rem" }} />
+                  </CardContent>
+                </Card>
+              </Grid>
+            </Grid>
+            <Grid>
+
+            </Grid>
+          </Grid>
+          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "15em" }} >
+            <Grid item>
+              <Grid container alignItems='center' justify="center">
+                <Card className={classes.revolutionCard}>
+                  <CardContent>
+                    <img className={classes.icon} src={orange} alt="lightbulb" justify="center" style={{ opacity: 0.5 }} />
+                    <NfcIcon className={classes.icon} style={{ fontSize: "10rem" }} />
+                  </CardContent>
+                </Card>
+              </Grid>
+            </Grid>
+            <Grid>
+            </Grid>
+          </Grid>
+        </Grid>
+
+        <Grid item container direction='row' justify='center' style={{ marginBottom: "5em" }} >
+          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "15em" }} >
+            <Grid item>
+              <Grid container alignItems='center' justify="center">
+                <Card className={classes.revolutionCard}>
+                  <CardContent>
+                    <img className={classes.icon} src={purple} alt="lightbulb" justify="center" style={{ opacity: 0.5 }} />
+                    <WifiIcon className={classes.icon} style={{ fontSize: "10rem" }} />
+                  </CardContent>
+                </Card>
+              </Grid>
+            </Grid>
+          </Grid>
+          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "15em" }} >
+            <Grid item>
+              <Grid container alignItems='center' justify="center">
+                <Card className={classes.revolutionCard}>
+                  <CardContent>
+                    <img className={classes.icon} src={pink} alt="lightbulb" justify="center" style={{ opacity: 0.5 }} />
+                    <ModeEditIcon className={classes.icon} style={{ fontSize: "10rem" }} />
+                  </CardContent>
+                </Card>
+              </Grid>
+            </Grid>
+            <Grid>
+            </Grid>
+          </Grid>
+          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "15em" }} >
+            <Grid item>
+              <Grid container alignItems='center' justify="center">
+                <Card className={classes.revolutionCard}>
+                  <CardContent>
+                    <img className={classes.icon} src={yellow} alt="lightbulb" justify="center" style={{ opacity: 0.5 }} />
+                    <StyleIcon className={classes.icon} style={{ fontSize: "10rem" }} />
+                  </CardContent>
+                </Card>
+              </Grid>
+            </Grid>
+            <Grid>
             </Grid>
           </Grid>
 
-        </Grid>
-        <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "15em" }} >
-          <Grid item>
-            <Grid container alignItems='center' justify="center">
-              <Card className={classes.revolutionCard} behavior="slide">
-                <CardContent>
-                  <img className={classes.icon} src={red} alt="lightbulb" justify="center"/>
-                  <QrCodeScannerIcon className={classes.icon} style={{ fontSize: "10rem" }} />
-                </CardContent>
-              </Card>
-            </Grid>
-          </Grid>
-          <Grid>
-
-          </Grid>
-        </Grid>
-        <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "15em" }} >
-          <Grid item>
-            <Grid container alignItems='center' justify="center">
-              <Card className={classes.revolutionCard}>
-                <CardContent>
-                  <img className={classes.icon} src={blue} alt="lightbulb" justify="center" />
-                  <LocationOnIcon className={classes.icon} style={{ fontSize: "10rem" }} />
-                </CardContent>
-              </Card>
-            </Grid>
-          </Grid>
-          <Grid>
-
-          </Grid>
-        </Grid>
-        <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "15em" }} >
-          <Grid item>
-            <Grid container alignItems='center' justify="center">
-              <Card className={classes.revolutionCard}>
-                <CardContent>
-                  <img className={classes.icon} src={orange} alt="lightbulb" justify="center" />
-                  <NfcIcon className={classes.icon} style={{ fontSize: "10rem" }} />
-                </CardContent>
-              </Card>
-            </Grid>
-          </Grid>
-          <Grid>
-          </Grid>
-        </Grid>
-      </Grid>
-
-      <Grid item container direction='row' justify='center' style={{ marginBottom: "20em" }} >
-        <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "15em" }} >
-          <Grid item>
-            <Grid container alignItems='center' justify="center">
-              <Card className={classes.revolutionCard}>
-                <CardContent>
-                  <img className={classes.icon} src={purple} alt="lightbulb" justify="center" />
-                  <WifiIcon className={classes.icon} style={{ fontSize: "10rem" }} />
-                </CardContent>
-              </Card>
-            </Grid>
-          </Grid>
-        </Grid>
-        <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "15em" }} >
-          <Grid item>
-            <Grid container alignItems='center' justify="center">
-              <Card className={classes.revolutionCard}>
-                <CardContent>
-                  <img className={classes.icon} src={pink} alt="lightbulb" justify="center" />
-                  <ModeEditIcon className={classes.icon} style={{ fontSize: "10rem" }} />
-                </CardContent>
-              </Card>
-            </Grid>
-          </Grid>
-          <Grid>
-          </Grid>
-        </Grid>
-        <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "15em" }} >
-          <Grid item>
-            <Grid container alignItems='center' justify="center">
-              <Card className={classes.revolutionCard}>
-                <CardContent>
-                  <img className={classes.icon} src={yellow} alt="lightbulb" justify="center" />
-                  <StyleIcon className={classes.icon} style={{ fontSize: "10rem" }} />
-                </CardContent>
-              </Card>
-            </Grid>
-          </Grid>
-          <Grid>
-          </Grid>
         </Grid>
       </Grid>
       {/*End Technologies*/}
+
+      <Grid item container direction='row' justify='center'  >
+        <Button
+          variant="outlined"
+          color="#000000"
+          className={classes.button}
+          component={Link}
+          to='/estimate'
+          onClick={() => props.setValue(5)}
+          font-size="25px">
+          Learn More
+
+        </Button>
+      </Grid>
+
+
+      <Grid item>{/*---IOS/Android Block---*/}
+        <Grid container direction='row' justify="flex-end" style={{ marginBottom: "20em", marginTop: "10em"}}>
+
+        <Typography variant='subtitle2' style={{ marginRight:"5em"}}>
+            Let's Talk! 
+          </Typography>
+          <Grid item >
+            
+            <img className={classes.infoBackground2} alt="mobile phone icon" src={right} />
+
+          </Grid>
+        </Grid>
+      </Grid>
+
+
+
+
+
+
     </Grid>
+
+
+
+
   );
 
 }

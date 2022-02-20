@@ -336,7 +336,7 @@ export default function Header(props) {
 
     return (
         <React.Fragment>
-          
+
                 <AppBar position="fixed" className={classes.appbar} color="white">
                     <Toolbar disableGutters>
                         <Button disableRipple component={Link} to='/' onClick={() => props.setValue(0)} className={classes.logoContainer}>
@@ -348,7 +348,7 @@ export default function Header(props) {
                         {matches ? drawer : tabs}
                     </Toolbar>
                 </AppBar>
-    
+       
             <div className={classes.toolbarMargin} />
         </React.Fragment>
     )

@@ -54,10 +54,11 @@ export default createTheme({
             fontWeight: 300
         },
         subtitle2:{
-            fontSize: "1.25rem",
-            color: "white",
+            fontSize: "2rem",
+            color: arcGrey,
             fontWeight: 300
         },
+
         learnButton:{
             borderColor: arcBlue,
             color: arcBlue,
