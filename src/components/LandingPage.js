@@ -119,8 +119,8 @@ const useStyle = makeStyles(theme => ({
     padding: 0,
     boxShadow: theme.shadows[10],
     borderRadius: 15,
-    height: "12em",
-    width: "12em",
+    height: "10em",
+    width: "10em",
 
   },
   infoBackground: {
@@ -130,6 +130,7 @@ const useStyle = makeStyles(theme => ({
     backgroundRepeat: "no-repeat",
     height: "100%",
     width: "100%",
+    
 
   },
   icon: {
@@ -205,15 +206,15 @@ const useStyle = makeStyles(theme => ({
  
   },
   whatsapp: {
-    height: "10em",
-    width: "10em",
+    height: "8em",
+    width: "8em",
     marginTop: "1em",
     marginLeft:"3em"
 
   },
   mail: {
-    height: "10em",
-    width: "10em",
+    height: "8em",
+    width: "8em",
     marginTop: "1em"
 
   },
@@ -282,27 +283,27 @@ export default function LandingPage(props) {
           </Typography>
         </Grid>
 
-        <Grid item container direction='row' justify='center' style={{ marginTop: "1em", marginBottom: "5em" }} >
-          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "15em" }} >
+        <Grid item container direction='row' justify='center' style={{ marginTop: "3em", marginBottom: "3em" }} >
+          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em" }} >
             <Grid item>
               <Grid container alignItems='center' justify="center">
                 <Card className={classes.revolutionCard}>
                   <CardContent>
                     <img className={classes.icon} src={cash} alt="lightbulb" style={{ opacity: 0.3 }} />
-                    <FaceIcon className={classes.icon} style={{ fontSize: "10rem" }} />
+                    <FaceIcon className={classes.icon} style={{ fontSize: "8rem" }} />
                   </CardContent>
                 </Card>
               </Grid>
             </Grid>
 
           </Grid>
-          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "15em" }} >
+          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em" }} >
             <Grid item>
               <Grid container alignItems='center' justify="center">
                 <Card className={classes.revolutionCard} >
                   <CardContent>
                     <img className={classes.icon} src={red} alt="lightbulb" justify="center" style={{ opacity: 0.3 }} />
-                    <QrCodeScannerIcon className={classes.icon} style={{ fontSize: "10rem" }} />
+                    <QrCodeScannerIcon className={classes.icon} style={{ fontSize: "8rem" }} />
                   </CardContent>
                 </Card>
               </Grid>
@@ -311,13 +312,13 @@ export default function LandingPage(props) {
 
             </Grid>
           </Grid>
-          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "15em" }} >
+          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em" }} >
             <Grid item>
               <Grid container alignItems='center' justify="center">
                 <Card className={classes.revolutionCard}>
                   <CardContent>
                     <img className={classes.icon} src={blue} alt="lightbulb" justify="center" style={{ opacity: 0.3 }} />
-                    <LocationOnIcon className={classes.icon} style={{ fontSize: "10rem" }} />
+                    <LocationOnIcon className={classes.icon} style={{ fontSize: "8rem" }} />
                   </CardContent>
                 </Card>
               </Grid>
@@ -326,13 +327,13 @@ export default function LandingPage(props) {
 
             </Grid>
           </Grid>
-          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "15em" }} >
+          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em" }} >
             <Grid item>
               <Grid container alignItems='center' justify="center">
                 <Card className={classes.revolutionCard}>
                   <CardContent>
                     <img className={classes.icon} src={orange} alt="lightbulb" justify="center" style={{ opacity: 0.3 }} />
-                    <NfcIcon className={classes.icon} style={{ fontSize: "10rem" }} />
+                    <NfcIcon className={classes.icon} style={{ fontSize: "8rem" }} />
                   </CardContent>
                 </Card>
               </Grid>
@@ -342,26 +343,26 @@ export default function LandingPage(props) {
           </Grid>
         </Grid>
 
-        <Grid item container direction='row' justify='center' style={{ marginBottom: "5em" }} >
-          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "15em" }} >
+        <Grid item container direction='row' justify='center' style={{ marginBottom: "3em" }} >
+          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em" }} >
             <Grid item>
               <Grid container alignItems='center' justify="center">
                 <Card className={classes.revolutionCard}>
                   <CardContent>
                     <img className={classes.icon} src={purple} alt="lightbulb" justify="center" style={{ opacity: 0.2 }} />
-                    <WifiIcon className={classes.icon} style={{ fontSize: "10rem" }} />
+                    <WifiIcon className={classes.icon} style={{ fontSize: "8rem" }} />
                   </CardContent>
                 </Card>
               </Grid>
             </Grid>
           </Grid>
-          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "15em" }} >
+          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em" }} >
             <Grid item>
               <Grid container alignItems='center' justify="center">
                 <Card className={classes.revolutionCard}>
                   <CardContent>
                     <img className={classes.icon} src={pink} alt="lightbulb" justify="center" style={{ opacity: 0.3 }} />
-                    <ModeEditIcon className={classes.icon} style={{ fontSize: "10rem" }} />
+                    <ModeEditIcon className={classes.icon} style={{ fontSize: "8rem" }} />
                   </CardContent>
                 </Card>
               </Grid>
@@ -369,13 +370,13 @@ export default function LandingPage(props) {
             <Grid>
             </Grid>
           </Grid>
-          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "15em" }} >
+          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em" }} >
             <Grid item>
               <Grid container alignItems='center' justify="center">
                 <Card className={classes.revolutionCard}>
                   <CardContent>
                     <img className={classes.icon} src={yellow} alt="lightbulb" justify="center" style={{ opacity: 0.3 }} />
-                    <StyleIcon className={classes.icon} style={{ fontSize: "10rem" }} />
+                    <StyleIcon className={classes.icon} style={{ fontSize: "8rem" }} />
                   </CardContent>
                 </Card>
               </Grid>
@@ -383,13 +384,13 @@ export default function LandingPage(props) {
             <Grid>
             </Grid>
           </Grid>
-          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "15em" }} >
+          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em" }} >
             <Grid item>
               <Grid container alignItems='center' justify="center">
                 <Card className={classes.revolutionCard}>
                   <CardContent>
                     <img className={classes.icon} src={gray} alt="lightbulb" justify="center" style={{ opacity: 0.15 }} />
-                    <TouchAppIcon className={classes.icon} style={{ fontSize: "10rem" }} />
+                    <TouchAppIcon className={classes.icon} style={{ fontSize: "8rem" }} />
                   </CardContent>
                 </Card>
               </Grid>
@@ -448,7 +449,7 @@ export default function LandingPage(props) {
               Let's Talk!
             </Typography>
             <Typography variant="subtitle2" align='center'>
-            We are here for you  <br/> for any question or request
+            We are here for you  <br/> for any question or request.
             </Typography>
             <Grid container justify="center" className={classes.buttonContainer}>
             <Grid item component={"a"} href="https://play.google.com/store/apps" rel="noopener noreferrer" target="_blank">
