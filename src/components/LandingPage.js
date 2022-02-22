@@ -24,10 +24,16 @@ import red from '../assets/red.jpg';
 import purple from '../assets/purple.jpg';
 import pink from '../assets/pink.jpg';
 import yellow from '../assets/yellow.jpg';
+import gray from '../assets/gray.png';
 import stopwatch from '../assets/stopwatch.svg';
 import website from '../assets/phonecomputer.png';
 import right from '../assets/right-red.png';
+import background3 from '../assets/background3.png';
+import background4 from '../assets/background4.png';
 import talk from '../assets/talk.png';
+import megaphone from '../assets/megaphone.png';
+import mail from '../assets/mail.png';
+import whatsapp  from '../assets/whatsapp.png';
 import googleplay from '../assets/googleplay.png';
 import FaceIcon from '@mui/icons-material/Face';
 import QrCodeScannerIcon from '@mui/icons-material/QrCodeScanner';
@@ -37,6 +43,8 @@ import WifiIcon from '@mui/icons-material/Wifi';
 import ModeEditIcon from '@mui/icons-material/ModeEdit';
 import StyleIcon from '@mui/icons-material/Style';
 import { animateText, samples } from "react-punch";
+import FingerprintIcon from '@mui/icons-material/Fingerprint';
+import TouchAppIcon from '@mui/icons-material/TouchApp';
 
 const useStyle = makeStyles(theme => ({
   animation: {
@@ -153,11 +161,12 @@ const useStyle = makeStyles(theme => ({
   },
   infoBackground2: {
     backgroundImage: `url(${right})`,
-
+    alignItems: "flex-end",
     backgroundSize: "cover",
-    justifyContent: "flex-end",
-    height: "40em",
-    width: "40em",
+    height: "35em",
+    width: "35em",
+    textAlign: 'right',
+    alignSelf: 'flex-end',
     [theme.breakpoints.down("sm")]: {
       height: "28em",
       width: "28em",
@@ -177,14 +186,37 @@ const useStyle = makeStyles(theme => ({
     position: "relative",
     top: 0,
     left: 0,
-   
+
   },
   image5: {
     position: "absolute",
     top: "30px",
     left: "30px"
-   
-  }
+
+  },
+  infoBackground3: {
+
+    backgroundSize: "cover",
+    height: "100%",
+    width: "100%",
+    opacity:"0.3",
+    backgroundPosition:"center",
+    backgroundRepeat:"no-repeat",
+ 
+  },
+  whatsapp: {
+    height: "10em",
+    width: "10em",
+    marginTop: "1em",
+    marginLeft:"3em"
+
+  },
+  mail: {
+    height: "10em",
+    width: "10em",
+    marginTop: "1em"
+
+  },
 }))
 
 
@@ -213,7 +245,7 @@ export default function LandingPage(props) {
 
       {/*welcome*/}
       <Grid item>
-        <Grid container style={{ height: "40em" }} alignItems="center" direction='row' className={classes.infoBackground} style={{ marginBottom: "10em", marginTop: "5em" }}>
+        <Grid container style={{ height: "40em", marginBottom: "10em", marginTop: "5em" }} alignItems="center" direction='row' className={classes.infoBackground} >
           <Grid item >
             <img className={classes.image} src={website} alt="lightbulb" />
           </Grid>
@@ -256,7 +288,7 @@ export default function LandingPage(props) {
               <Grid container alignItems='center' justify="center">
                 <Card className={classes.revolutionCard}>
                   <CardContent>
-                    <img className={classes.icon} src={cash} alt="lightbulb" style={{ opacity: 0.5 }} />
+                    <img className={classes.icon} src={cash} alt="lightbulb" style={{ opacity: 0.3 }} />
                     <FaceIcon className={classes.icon} style={{ fontSize: "10rem" }} />
                   </CardContent>
                 </Card>
@@ -269,7 +301,7 @@ export default function LandingPage(props) {
               <Grid container alignItems='center' justify="center">
                 <Card className={classes.revolutionCard} >
                   <CardContent>
-                    <img className={classes.icon} src={red} alt="lightbulb" justify="center" style={{ opacity: 0.5 }} />
+                    <img className={classes.icon} src={red} alt="lightbulb" justify="center" style={{ opacity: 0.3 }} />
                     <QrCodeScannerIcon className={classes.icon} style={{ fontSize: "10rem" }} />
                   </CardContent>
                 </Card>
@@ -284,7 +316,7 @@ export default function LandingPage(props) {
               <Grid container alignItems='center' justify="center">
                 <Card className={classes.revolutionCard}>
                   <CardContent>
-                    <img className={classes.icon} src={blue} alt="lightbulb" justify="center" style={{ opacity: 0.5 }} />
+                    <img className={classes.icon} src={blue} alt="lightbulb" justify="center" style={{ opacity: 0.3 }} />
                     <LocationOnIcon className={classes.icon} style={{ fontSize: "10rem" }} />
                   </CardContent>
                 </Card>
@@ -299,7 +331,7 @@ export default function LandingPage(props) {
               <Grid container alignItems='center' justify="center">
                 <Card className={classes.revolutionCard}>
                   <CardContent>
-                    <img className={classes.icon} src={orange} alt="lightbulb" justify="center" style={{ opacity: 0.5 }} />
+                    <img className={classes.icon} src={orange} alt="lightbulb" justify="center" style={{ opacity: 0.3 }} />
                     <NfcIcon className={classes.icon} style={{ fontSize: "10rem" }} />
                   </CardContent>
                 </Card>
@@ -316,7 +348,7 @@ export default function LandingPage(props) {
               <Grid container alignItems='center' justify="center">
                 <Card className={classes.revolutionCard}>
                   <CardContent>
-                    <img className={classes.icon} src={purple} alt="lightbulb" justify="center" style={{ opacity: 0.5 }} />
+                    <img className={classes.icon} src={purple} alt="lightbulb" justify="center" style={{ opacity: 0.2 }} />
                     <WifiIcon className={classes.icon} style={{ fontSize: "10rem" }} />
                   </CardContent>
                 </Card>
@@ -328,7 +360,7 @@ export default function LandingPage(props) {
               <Grid container alignItems='center' justify="center">
                 <Card className={classes.revolutionCard}>
                   <CardContent>
-                    <img className={classes.icon} src={pink} alt="lightbulb" justify="center" style={{ opacity: 0.5 }} />
+                    <img className={classes.icon} src={pink} alt="lightbulb" justify="center" style={{ opacity: 0.3 }} />
                     <ModeEditIcon className={classes.icon} style={{ fontSize: "10rem" }} />
                   </CardContent>
                 </Card>
@@ -342,8 +374,22 @@ export default function LandingPage(props) {
               <Grid container alignItems='center' justify="center">
                 <Card className={classes.revolutionCard}>
                   <CardContent>
-                    <img className={classes.icon} src={yellow} alt="lightbulb" justify="center" style={{ opacity: 0.5 }} />
+                    <img className={classes.icon} src={yellow} alt="lightbulb" justify="center" style={{ opacity: 0.3 }} />
                     <StyleIcon className={classes.icon} style={{ fontSize: "10rem" }} />
+                  </CardContent>
+                </Card>
+              </Grid>
+            </Grid>
+            <Grid>
+            </Grid>
+          </Grid>
+          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "15em" }} >
+            <Grid item>
+              <Grid container alignItems='center' justify="center">
+                <Card className={classes.revolutionCard}>
+                  <CardContent>
+                    <img className={classes.icon} src={gray} alt="lightbulb" justify="center" style={{ opacity: 0.15 }} />
+                    <TouchAppIcon className={classes.icon} style={{ fontSize: "10rem" }} />
                   </CardContent>
                 </Card>
               </Grid>
@@ -356,37 +402,68 @@ export default function LandingPage(props) {
       </Grid>
       {/*End Technologies*/}
 
-      <Grid item container direction='row' justify='center'  >
-        <Button
-          variant="outlined"
-          color="#000000"
-          className={classes.button}
-          component={Link}
-          to='/estimate'
-          onClick={() => props.setValue(5)}
-          font-size="25px">
-          Learn More
 
-        </Button>
-      </Grid>
+      
+
+      <Grid container justify="center" className={classes.buttonContainer}>
+              <Grid item>
+                <Button component={Link} to="/estimate" className={classes.estimateButton} onClick={() => props.setValue(5)} variant="contained">Free Download</Button>
+              </Grid>
+              <Grid item>
+                <Button component={Link} to="/revolution" variant="outlined" onClick={() => props.setValue(2)} className={classes.learnButtonHero}>
+                  <span style={{ marginRight: 10 }}>Learn More</span>
+                  <ButtonArrow width={15} height={15} fill={theme.palette.common.blue} />
+                </Button>
+              </Grid>
+            </Grid>
 
 
-      <Grid item>{/*---IOS/Android Block---*/}
-        <Grid container direction='row' justify="flex-end" style={{ marginBottom: "20em", marginTop: "10em"}}>
+      <Grid item>
+        <Grid container direction='row'  style={{  marginTop: "10em" }}>
 
-        <Typography variant='subtitle2' style={{ marginRight:"5em"}}>
-            Let's Talk! 
-          </Typography>
           <Grid item >
-            
-            <img className={classes.infoBackground2} alt="mobile phone icon" src={right} />
+
+            <img className={classes.infoBackground3} alt="mobile phone icon" src={background3} />
 
           </Grid>
         </Grid>
       </Grid>
 
+      <Grid item>
+        <Grid container direction='row'  style={{ marginTop: "5em" }}>
 
+          <Grid item >
 
+            <img className={classes.infoBackground3} alt="mobile phone icon" src={background4} />
+
+          </Grid>
+        </Grid>
+      </Grid>
+
+      
+      <Grid item>{/*---IOS/Android Block---*/}
+        <Grid container direction='row' justify="flex-end" style={{ marginBottom: "5em" }}>
+          <Grid sm item className={classes.heroTextContainer} style={{margin: "auto"}}>
+            <Typography variant="h2" align='center'>
+              Let's Talk!
+            </Typography>
+            <Typography variant="subtitle2" align='center'>
+            We are here for you  <br/> for any question or request
+            </Typography>
+            <Grid container justify="center" className={classes.buttonContainer}>
+            <Grid item component={"a"} href="https://play.google.com/store/apps" rel="noopener noreferrer" target="_blank">
+              <img className={classes.mail} src={mail} alt="lightbulb" />
+            </Grid>
+            <Grid item component={"a"} href="https://play.google.com/store/apps" rel="noopener noreferrer" target="_blank">
+              <img className={classes.whatsapp} src={whatsapp} alt="lightbulb" />
+            </Grid>
+            </Grid>
+          </Grid>
+          <Grid item>
+            <img className={classes.infoBackground2} src={megaphone} alt="lightbulb" />
+          </Grid>
+        </Grid>
+      </Grid>
 
 
 
