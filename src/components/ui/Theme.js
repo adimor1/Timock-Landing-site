@@ -48,6 +48,12 @@ export default createTheme({
             color: arcBlue,
             fontWeight: 700
         },
+        h5:{
+            fontFamily:"Raleway", 
+            fontSize: "1.7rem",
+            color: arcGrey,
+            fontWeight: 700
+        },
         subtitle1:{
             fontSize: "2.5rem",
             color: arcGrey,
@@ -55,6 +61,11 @@ export default createTheme({
         },
         subtitle2:{
             fontSize: "2rem",
+            color: arcGrey,
+            fontWeight: 300
+        },
+        subtitle3:{
+            fontSize: "1rem",
             color: arcGrey,
             fontWeight: 300
         },

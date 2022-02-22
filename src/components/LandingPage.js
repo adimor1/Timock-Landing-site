@@ -25,6 +25,10 @@ import purple from '../assets/purple.jpg';
 import pink from '../assets/pink.jpg';
 import yellow from '../assets/yellow.jpg';
 import gray from '../assets/gray.png';
+import report from '../assets/report.png';
+import addwork from '../assets/addwork.png';
+import config from '../assets/config.png';
+import hourglass from '../assets/hourglass.png';
 import stopwatch from '../assets/stopwatch.svg';
 import phones from '../assets/phones.png';
 import right from '../assets/right-red.png';
@@ -201,7 +205,7 @@ const useStyle = makeStyles(theme => ({
     height: "100%",
     width: "100%",
 
-    
+
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
 
@@ -211,7 +215,7 @@ const useStyle = makeStyles(theme => ({
 
     height: "100%",
     width: "100%",
-   
+
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
 
@@ -240,6 +244,11 @@ const useStyle = makeStyles(theme => ({
       height: "28em",
       width: "28em",
     }
+  },
+  icon3: {
+    position: "absolute",
+    height: "10em",
+    width: "10em",
   },
 }))
 
@@ -302,7 +311,8 @@ export default function LandingPage(props) {
           </Typography>
           <Typography variant='subtitle2' >
             <br />
-            You will only have to choose.
+            you will only have to  {" "}
+            <span className={classes.specialtext}>choose</span>
           </Typography>
         </Grid>
 
@@ -318,6 +328,11 @@ export default function LandingPage(props) {
                 </Card>
               </Grid>
             </Grid>
+            <Grid item style={{ marginTop: "0.7em" }}>
+              <Typography variant='h5'  >
+                Face ID
+              </Typography>
+            </Grid>
 
           </Grid>
           <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em" }} >
@@ -330,6 +345,11 @@ export default function LandingPage(props) {
                   </CardContent>
                 </Card>
               </Grid>
+            </Grid>
+            <Grid item style={{ marginTop: "0.7em" }}>
+              <Typography variant='h5'  >
+                QR
+              </Typography>
             </Grid>
             <Grid>
 
@@ -346,6 +366,11 @@ export default function LandingPage(props) {
                 </Card>
               </Grid>
             </Grid>
+            <Grid item style={{ marginTop: "0.7em" }}>
+              <Typography variant='h5'  >
+                GPS
+              </Typography>
+            </Grid>
             <Grid>
 
             </Grid>
@@ -360,6 +385,11 @@ export default function LandingPage(props) {
                   </CardContent>
                 </Card>
               </Grid>
+            </Grid>
+            <Grid item style={{ marginTop: "0.7em" }}>
+              <Typography variant='h5'  >
+                NFC
+              </Typography>
             </Grid>
             <Grid>
             </Grid>
@@ -377,6 +407,12 @@ export default function LandingPage(props) {
                   </CardContent>
                 </Card>
               </Grid>
+
+            </Grid>
+            <Grid item style={{ marginTop: "0.7em" }}>
+              <Typography variant='h5'  >
+                WIFI
+              </Typography>
             </Grid>
           </Grid>
           <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em" }} >
@@ -389,6 +425,11 @@ export default function LandingPage(props) {
                   </CardContent>
                 </Card>
               </Grid>
+            </Grid>
+            <Grid item style={{ marginTop: "0.7em" }}>
+              <Typography variant='h5'  >
+                BASIC
+              </Typography>
             </Grid>
             <Grid>
             </Grid>
@@ -404,6 +445,11 @@ export default function LandingPage(props) {
                 </Card>
               </Grid>
             </Grid>
+            <Grid item style={{ marginTop: "0.7em" }}>
+              <Typography variant='h5'  >
+                HCE
+              </Typography>
+            </Grid>
             <Grid>
             </Grid>
           </Grid>
@@ -417,6 +463,11 @@ export default function LandingPage(props) {
                   </CardContent>
                 </Card>
               </Grid>
+            </Grid>
+            <Grid item style={{ marginTop: "0.7em" }}>
+              <Typography variant='h5'  >
+                Touch ID
+              </Typography>
             </Grid>
             <Grid>
             </Grid>
@@ -442,7 +493,11 @@ export default function LandingPage(props) {
       </Grid>
 
 
-
+      <Grid item align='center' style={{ marginTop: "7em" }}  >
+        <Typography variant='h2' >
+          How It Work?
+        </Typography>
+      </Grid>
 
       <Grid item>{/*--- how it work 1-2---*/}
         <Grid container style={{ height: "50em" }} alignItems="center" direction='row'
@@ -450,20 +505,23 @@ export default function LandingPage(props) {
 
 
 
+
           <Grid item>{/*--- Custom Block---*/}
             <Grid container direction='row' justify={matchesSM ? "center" : undefined} className={classes.servicesContainer}>
               <Grid item style={{ marginLeft: matchesSM ? 0 : "5em", textAlign: matchesSM ? "center" : undefined }}>
                 <Typography variant="h4">
-                  Custom Software Development
+                  Definitions
                 </Typography>
-       
-                <Typography variant="subtitle1">
-                  Complete digital Solutions, <br/> from investigation to {" "}
-                  <span className={classes.specialtext}>Celebration</span>
+
+                <Typography variant="subtitle2">
+                Set up branches of your business
+                </Typography>
+                <Typography variant="subtitle2">
+                Select options for entering work hours
                 </Typography>
               </Grid>
               <Grid item>
-                <img className={classes.icon} alt="custom software icon" src={customSoftwareIcon} />
+                <img className={classes.icon3} alt="custom software icon" src={config} />
               </Grid>
             </Grid>
           </Grid>
@@ -472,19 +530,59 @@ export default function LandingPage(props) {
           <Grid container direction='row' justify={matchesSM ? "center" : "flex-end"} className={classes.servicesContainer} style={{ marginTop: matchesSM ? "1em" : "5em" }}>
             <Grid item style={{ textAlign: matchesSM ? "center" : undefined, width: matchesSM ? undefined : "35em" }}>
               <Typography variant="h4">
-                IOS/Android App Development
+                Add Employees
               </Typography>
-              <Typography variant="subtitle1" className={classes.subtitle}>
-                Extend Functionality. Extend Access. Increase Engagement.
+              <Typography variant="subtitle2" className={classes.subtitle}>
+              Add employees to your business
               </Typography>
-              <Typography variant="subtitle1">
-                Integrate your web experience or create a standalone app
-                {matchesSM ? null : <br />}with either mobile platform.
+              <Typography variant="subtitle2" className={classes.subtitle}>
+              They will receive a personal code that keeps a promise
+              </Typography>
+
+
+            </Grid>
+            <Grid item style={{ marginRight: matchesSM ? 0 : "10em" }}>
+              <img className={classes.icon3} alt="mobile phone icon" src={addwork} width="250em" />
+            </Grid>
+          </Grid>
+
+
+          <Grid item>{/*--- Custom Block---*/}
+            <Grid container direction='row' justify={matchesSM ? "center" : undefined} className={classes.servicesContainer}>
+              <Grid item style={{ marginLeft: matchesSM ? 0 : "5em", textAlign: matchesSM ? "center" : undefined }}>
+                <Typography variant="h4">
+                  Documentation Working Hours
+                </Typography>
+
+                <Typography variant="subtitle2">
+                Employees will report work start and work hours
+                </Typography>
+                <Typography variant="subtitle2">
+                We will detect exceptional cases
+                </Typography>
+              </Grid>
+              <Grid item>
+                <img className={classes.icon3} alt="custom software icon" src={hourglass} />
+              </Grid>
+            </Grid>
+          </Grid>
+
+
+          <Grid container direction='row' justify={matchesSM ? "center" : "flex-end"} className={classes.servicesContainer} style={{ marginTop: matchesSM ? "1em" : "5em" }}>
+            <Grid item style={{ textAlign: matchesSM ? "center" : undefined, width: matchesSM ? undefined : "35em" }}>
+              <Typography variant="h4">
+                Generate reports
+              </Typography>
+              <Typography variant="subtitle2" className={classes.subtitle}>
+              You can generate different reports
+              </Typography>
+              <Typography variant="subtitle2" className={classes.subtitle}>
+              In cross-sections of certain workers or a certain time
               </Typography>
 
             </Grid>
             <Grid item style={{ marginRight: matchesSM ? 0 : "10em" }}>
-              <img className={classes.icon} alt="mobile phone icon" src={mobileAppsIcon} width="250em" />
+              <img className={classes.icon3} alt="mobile phone icon" src={report} width="250em" />
             </Grid>
           </Grid>
 
@@ -502,6 +600,17 @@ export default function LandingPage(props) {
         </Grid>
       </Grid>
 
+      <Grid container justify="center" className={classes.buttonContainer} style={{ marginBottom: "10em" }}>
+        <Grid item>
+          <Button component={Link} to="/estimate" className={classes.estimateButton} onClick={() => props.setValue(5)} variant="contained">Free Download</Button>
+        </Grid>
+        <Grid item>
+          <Button component={Link} to="/revolution" variant="outlined" onClick={() => props.setValue(2)} className={classes.learnButtonHero}>
+            <span style={{ marginRight: 10 }}>Watch Video</span>
+            <ButtonArrow width={15} height={15} fill={theme.palette.common.blue} />
+          </Button>
+        </Grid>
+      </Grid>
 
 
 
