@@ -3,7 +3,7 @@ import { createTheme } from "@material-ui/core";
 
 const arcBlue = "#3be2ab";
 const arcOrange= "#202124";
-const arcGrey="#868686"
+const arcGrey="#868686";
 export default createTheme({
     palette:{
         common:{
@@ -69,6 +69,7 @@ export default createTheme({
             color: arcGrey,
             fontWeight: 300
         },
+
 
         learnButton:{
             borderColor: arcBlue,

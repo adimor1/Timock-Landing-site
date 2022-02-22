@@ -90,6 +90,7 @@ const useStyle = makeStyles(theme => ({
   },
   specialtext: {
     fontFamily: "Pacifico",
+    fontSize: "3rem",
     color: theme.palette.common.orange
   },
   learnButton: {
@@ -105,7 +106,7 @@ const useStyle = makeStyles(theme => ({
   },
 
   servicesContainer: {
-    marginTop: "12em",
+    marginTop: "5em",
     [theme.breakpoints.down("sm")]: {
       padding: 25
     }
@@ -493,18 +494,19 @@ export default function LandingPage(props) {
       </Grid>
 
 
-      <Grid item align='center' style={{ marginTop: "7em" }}  >
-        <Typography variant='h2' >
-          How It Work?
-        </Typography>
-      </Grid>
+
+
 
       <Grid item>{/*--- how it work 1-2---*/}
-        <Grid container style={{ height: "50em" }} alignItems="center" direction='row'
+        <Grid container style={{ height: "50em", marginTop:"5em" }} alignItems="center" direction='row' 
           className={classes.infoBackground3}>
 
 
-
+          <Grid container align='center' style={{ marginTop: "2em" }}  direction='row' justify="center" >
+            <Typography variant='h2' >
+              How It Works?
+            </Typography>
+          </Grid>
 
           <Grid item>{/*--- Custom Block---*/}
             <Grid container direction='row' justify={matchesSM ? "center" : undefined} className={classes.servicesContainer}>
@@ -514,10 +516,10 @@ export default function LandingPage(props) {
                 </Typography>
 
                 <Typography variant="subtitle2">
-                Set up branches of your business
+                  Set up branches of your business
                 </Typography>
                 <Typography variant="subtitle2">
-                Select options for entering work hours
+                  Select options for entering work hours
                 </Typography>
               </Grid>
               <Grid item>
@@ -527,21 +529,19 @@ export default function LandingPage(props) {
           </Grid>
 
 
-          <Grid container direction='row' justify={matchesSM ? "center" : "flex-end"} className={classes.servicesContainer} style={{ marginTop: matchesSM ? "1em" : "5em" }}>
+          <Grid container direction='row' justify={matchesSM ? "center" : "flex-end"} className={classes.servicesContainer} style={{ marginTop: matchesSM ? "1em" : "8em" }}>
             <Grid item style={{ textAlign: matchesSM ? "center" : undefined, width: matchesSM ? undefined : "35em" }}>
               <Typography variant="h4">
                 Add Employees
               </Typography>
               <Typography variant="subtitle2" className={classes.subtitle}>
-              Add employees to your business
+                Add employees to your business
               </Typography>
               <Typography variant="subtitle2" className={classes.subtitle}>
-              They will receive a personal code that keeps a promise
+                They will receive a personal code that keeps a promise
               </Typography>
-
-
             </Grid>
-            <Grid item style={{ marginRight: matchesSM ? 0 : "10em" }}>
+            <Grid item style={{ marginRight: matchesSM ? 0 : "15em" }}>
               <img className={classes.icon3} alt="mobile phone icon" src={addwork} width="250em" />
             </Grid>
           </Grid>
@@ -553,12 +553,11 @@ export default function LandingPage(props) {
                 <Typography variant="h4">
                   Documentation Working Hours
                 </Typography>
-
                 <Typography variant="subtitle2">
-                Employees will report work start and work hours
+                  Employees will report work start and <br /> work hours
                 </Typography>
                 <Typography variant="subtitle2">
-                We will detect exceptional cases
+                  We will detect exceptional cases
                 </Typography>
               </Grid>
               <Grid item>
@@ -574,23 +573,34 @@ export default function LandingPage(props) {
                 Generate reports
               </Typography>
               <Typography variant="subtitle2" className={classes.subtitle}>
-              You can generate different reports
+                You can generate different reports
               </Typography>
               <Typography variant="subtitle2" className={classes.subtitle}>
-              In cross-sections of certain workers or a certain time
+                In cross-sections of certain workers <br /> or a certain time
               </Typography>
-
             </Grid>
-            <Grid item style={{ marginRight: matchesSM ? 0 : "10em" }}>
+            <Grid item style={{ marginRight: matchesSM ? 0 : "15em" }}>
               <img className={classes.icon3} alt="mobile phone icon" src={report} width="250em" />
             </Grid>
           </Grid>
 
 
-
-
+          <Grid container justify="center" className={classes.buttonContainer} style={{ marginBottom: "7em", marginTop: "4em" }}>
+            <Grid item>
+              <Button component={Link} to="/estimate" className={classes.estimateButton} onClick={() => props.setValue(5)} variant="contained">Free Download</Button>
+            </Grid>
+            <Grid item>
+              <Button component={Link} to="/revolution" variant="outlined" onClick={() => props.setValue(2)} className={classes.learnButtonHero}>
+                <span style={{ marginRight: 10 }}>Watch Video</span>
+                <ButtonArrow width={15} height={15} fill={theme.palette.common.blue} />
+              </Button>
+            </Grid>
+          </Grid>
         </Grid>
+
+
       </Grid>
+
 
       <Grid item>{/*--- how it work 3-4---*/}
         <Grid container style={{ height: "45em" }} alignItems="center" direction='row'
@@ -600,22 +610,12 @@ export default function LandingPage(props) {
         </Grid>
       </Grid>
 
-      <Grid container justify="center" className={classes.buttonContainer} style={{ marginBottom: "10em" }}>
-        <Grid item>
-          <Button component={Link} to="/estimate" className={classes.estimateButton} onClick={() => props.setValue(5)} variant="contained">Free Download</Button>
-        </Grid>
-        <Grid item>
-          <Button component={Link} to="/revolution" variant="outlined" onClick={() => props.setValue(2)} className={classes.learnButtonHero}>
-            <span style={{ marginRight: 10 }}>Watch Video</span>
-            <ButtonArrow width={15} height={15} fill={theme.palette.common.blue} />
-          </Button>
-        </Grid>
-      </Grid>
+
 
 
 
       <Grid item>{/*---Lets talk---*/}
-        <Grid container direction='row' justify="flex-end">
+        <Grid container direction='row' justify="flex-end" style={{ marginTop: "8em" }}>
           <Grid sm item className={classes.heroTextContainer} style={{ margin: "auto" }}>
             <Typography variant="h2" align='center'>
               Let's Talk!
