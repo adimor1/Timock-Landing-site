@@ -13,7 +13,7 @@ import websiteIcon from '../assets/websiteIcon.svg';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import revolutionBackground from '../assets/background2.svg';
-import infoBackground from '../assets/backgroundbg.png';
+import backgroundbg from '../assets/backgroundbg.png';
 import CallToAction from './ui/CallToAction';
 import { Link } from 'react-router-dom';
 import lightbulb from '../assets/bulb.svg';
@@ -26,14 +26,14 @@ import pink from '../assets/pink.jpg';
 import yellow from '../assets/yellow.jpg';
 import gray from '../assets/gray.png';
 import stopwatch from '../assets/stopwatch.svg';
-import website from '../assets/phonecomputer.png';
+import phones from '../assets/phones.png';
 import right from '../assets/right-red.png';
 import background3 from '../assets/background3.png';
 import background4 from '../assets/background4.png';
 import talk from '../assets/talk.png';
 import megaphone from '../assets/megaphone.png';
 import mail from '../assets/mail.png';
-import whatsapp  from '../assets/whatsapp.png';
+import whatsapp from '../assets/whatsapp.png';
 import googleplay from '../assets/googleplay.png';
 import FaceIcon from '@mui/icons-material/Face';
 import QrCodeScannerIcon from '@mui/icons-material/QrCodeScanner';
@@ -124,13 +124,13 @@ const useStyle = makeStyles(theme => ({
 
   },
   infoBackground: {
-    backgroundImage: `url(${infoBackground})`,
+    backgroundImage: `url(${backgroundbg})`,
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     height: "100%",
     width: "100%",
-    
+
 
   },
   icon: {
@@ -143,8 +143,8 @@ const useStyle = makeStyles(theme => ({
 
   },
   image: {
-    height: "100%",
-    width: "100%",
+    height: "37em",
+    width: "47em",
 
   },
   image2: {
@@ -196,20 +196,31 @@ const useStyle = makeStyles(theme => ({
 
   },
   infoBackground3: {
+    backgroundImage: `url(${background3})`,
 
-    backgroundSize: "cover",
     height: "100%",
     width: "100%",
-    opacity:"0.3",
-    backgroundPosition:"center",
-    backgroundRepeat:"no-repeat",
- 
+
+    
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+
+  },
+  infoBackground4: {
+    backgroundImage: `url(${background4})`,
+
+    height: "100%",
+    width: "100%",
+   
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+
   },
   whatsapp: {
     height: "8em",
     width: "8em",
     marginTop: "1em",
-    marginLeft:"3em"
+    marginLeft: "3em"
 
   },
   mail: {
@@ -217,6 +228,18 @@ const useStyle = makeStyles(theme => ({
     width: "8em",
     marginTop: "1em"
 
+  },
+  infoBackground5: {
+    backgroundImage: `url(${backgroundbg})`,
+
+    backgroundSize: "cover",
+    height: "35em",
+    width: "43em",
+
+    [theme.breakpoints.down("sm")]: {
+      height: "28em",
+      width: "28em",
+    }
   },
 }))
 
@@ -246,9 +269,9 @@ export default function LandingPage(props) {
 
       {/*welcome*/}
       <Grid item>
-        <Grid container style={{ height: "40em", marginBottom: "10em", marginTop: "5em" }} alignItems="center" direction='row' className={classes.infoBackground} >
-          <Grid item >
-            <img className={classes.image} src={website} alt="lightbulb" />
+        <Grid container style={{ marginBottom: "5em", marginTop: "4em" }} alignItems="center" direction='row'  >
+          <Grid item>
+            <img className={classes.infoBackground5} src={phones} alt="lightbulb" style={{ marginRight: "5em" }} />
           </Grid>
           <Grid align='center' >
             <Typography variant='h2'  >
@@ -401,63 +424,103 @@ export default function LandingPage(props) {
 
         </Grid>
       </Grid>
-      {/*End Technologies*/}
 
 
-      
 
-      <Grid container justify="center" className={classes.buttonContainer}>
-              <Grid item>
-                <Button component={Link} to="/estimate" className={classes.estimateButton} onClick={() => props.setValue(5)} variant="contained">Free Download</Button>
+
+
+      <Grid container justify="center" className={classes.buttonContainer} style={{ marginBottom: "5em" }}>
+        <Grid item>
+          <Button component={Link} to="/estimate" className={classes.estimateButton} onClick={() => props.setValue(5)} variant="contained">Free Download</Button>
+        </Grid>
+        <Grid item>
+          <Button component={Link} to="/revolution" variant="outlined" onClick={() => props.setValue(2)} className={classes.learnButtonHero}>
+            <span style={{ marginRight: 10 }}>Learn More</span>
+            <ButtonArrow width={15} height={15} fill={theme.palette.common.blue} />
+          </Button>
+        </Grid>
+      </Grid>
+
+
+
+
+      <Grid item>{/*--- how it work 1-2---*/}
+        <Grid container style={{ height: "50em" }} alignItems="center" direction='row'
+          className={classes.infoBackground3}>
+
+
+
+          <Grid item>{/*--- Custom Block---*/}
+            <Grid container direction='row' justify={matchesSM ? "center" : undefined} className={classes.servicesContainer}>
+              <Grid item style={{ marginLeft: matchesSM ? 0 : "5em", textAlign: matchesSM ? "center" : undefined }}>
+                <Typography variant="h4">
+                  Custom Software Development
+                </Typography>
+       
+                <Typography variant="subtitle1">
+                  Complete digital Solutions, <br/> from investigation to {" "}
+                  <span className={classes.specialtext}>Celebration</span>
+                </Typography>
               </Grid>
               <Grid item>
-                <Button component={Link} to="/revolution" variant="outlined" onClick={() => props.setValue(2)} className={classes.learnButtonHero}>
-                  <span style={{ marginRight: 10 }}>Learn More</span>
-                  <ButtonArrow width={15} height={15} fill={theme.palette.common.blue} />
-                </Button>
+                <img className={classes.icon} alt="custom software icon" src={customSoftwareIcon} />
               </Grid>
             </Grid>
-
-
-      <Grid item>
-        <Grid container direction='row'  style={{  marginTop: "10em" }}>
-
-          <Grid item >
-
-            <img className={classes.infoBackground3} alt="mobile phone icon" src={background3} />
-
           </Grid>
+
+
+          <Grid container direction='row' justify={matchesSM ? "center" : "flex-end"} className={classes.servicesContainer} style={{ marginTop: matchesSM ? "1em" : "5em" }}>
+            <Grid item style={{ textAlign: matchesSM ? "center" : undefined, width: matchesSM ? undefined : "35em" }}>
+              <Typography variant="h4">
+                IOS/Android App Development
+              </Typography>
+              <Typography variant="subtitle1" className={classes.subtitle}>
+                Extend Functionality. Extend Access. Increase Engagement.
+              </Typography>
+              <Typography variant="subtitle1">
+                Integrate your web experience or create a standalone app
+                {matchesSM ? null : <br />}with either mobile platform.
+              </Typography>
+
+            </Grid>
+            <Grid item style={{ marginRight: matchesSM ? 0 : "10em" }}>
+              <img className={classes.icon} alt="mobile phone icon" src={mobileAppsIcon} width="250em" />
+            </Grid>
+          </Grid>
+
+
+
+
         </Grid>
       </Grid>
 
-      <Grid item>
-        <Grid container direction='row'  style={{ marginTop: "5em" }}>
+      <Grid item>{/*--- how it work 3-4---*/}
+        <Grid container style={{ height: "45em" }} alignItems="center" direction='row'
+          className={classes.infoBackground4}>
 
-          <Grid item >
 
-            <img className={classes.infoBackground3} alt="mobile phone icon" src={background4} />
-
-          </Grid>
         </Grid>
       </Grid>
 
-      
-      <Grid item>{/*---IOS/Android Block---*/}
-        <Grid container direction='row' justify="flex-end" style={{ marginBottom: "5em" }}>
-          <Grid sm item className={classes.heroTextContainer} style={{margin: "auto"}}>
+
+
+
+      <Grid item>{/*---Lets talk---*/}
+        <Grid container direction='row' justify="flex-end">
+          <Grid sm item className={classes.heroTextContainer} style={{ margin: "auto" }}>
             <Typography variant="h2" align='center'>
               Let's Talk!
             </Typography>
             <Typography variant="subtitle2" align='center'>
-            We are here for you  <br/> for any question or request.
+              We are here for you  <br /> for any question or request.
             </Typography>
             <Grid container justify="center" className={classes.buttonContainer}>
-            <Grid item component={"a"} href="https://play.google.com/store/apps" rel="noopener noreferrer" target="_blank">
-              <img className={classes.mail} src={mail} alt="lightbulb" />
-            </Grid>
-            <Grid item component={"a"} href="https://play.google.com/store/apps" rel="noopener noreferrer" target="_blank">
-              <img className={classes.whatsapp} src={whatsapp} alt="lightbulb" />
-            </Grid>
+              <Grid item component={"a"} href="https://play.google.com/store/apps" rel="noopener noreferrer" target="_blank">
+                <img className={classes.mail} src={mail} alt="lightbulb" />
+              </Grid>
+              <Grid item component={"a"} href="https://play.google.com/store/apps" rel="noopener noreferrer" target="_blank">
+                <img className={classes.whatsapp} src={whatsapp} alt="lightbulb" />
+              </Grid>
             </Grid>
           </Grid>
           <Grid item>
