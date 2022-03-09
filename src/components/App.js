@@ -5,8 +5,8 @@ import theme from './ui/Theme'
 import { BrowserRouter, Route , Switch} from "react-router-dom"
 import Footer from './ui/Footer';
 import LandingPage from './LandingPage';
-import Services from './Services';
-import  CustomSoftware from './CustomSoftware';
+
+
 import ReactDOM from "react-dom";
 
 function App() {
@@ -33,25 +33,8 @@ function App() {
           />}
         />
 
-      <Route 
-        exact 
-        path="/services" 
-        render={(props)=><Services 
-          {...props}
-          setValue={setValue} 
-          setSelectedIndex={setSelectedIndex}
-          />}
-        />
 
-      <Route 
-        exact 
-        path="/customsoftware" 
-        render={(props)=><CustomSoftware
-          {...props}
-          setValue={setValue} 
-          setSelectedIndex={setSelectedIndex}
-          />}
-        />
+      
 
         </Switch>
     

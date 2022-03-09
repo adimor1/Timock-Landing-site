@@ -6,17 +6,13 @@ import animationData from '../animations/landinganimation/data'
 import { Button } from '@material-ui/core';
 import ButtonArrow from './ui/ButtonArrow';
 import { Typography } from '@material-ui/core';
-import customSoftwareIcon from "../assets/Custom Software Icon.svg"
+
 import { useMediaQuery } from '@material-ui/core';
-import mobileAppsIcon from '../assets/mobileIcon.svg';
-import websiteIcon from '../assets/websiteIcon.svg';
+
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import revolutionBackground from '../assets/background2.svg';
 import backgroundbg from '../assets/backgroundbg.png';
-import CallToAction from './ui/CallToAction';
 import { Link } from 'react-router-dom';
-import lightbulb from '../assets/bulb.svg';
 import cash from '../assets/green.jpg';
 import orange from '../assets/orange.jpg';
 import blue from '../assets/blue.jpg';
@@ -29,12 +25,10 @@ import report from '../assets/report.png';
 import addwork from '../assets/addwork.png';
 import config from '../assets/config.png';
 import hourglass from '../assets/hourglass.png';
-import stopwatch from '../assets/stopwatch.svg';
 import phones from '../assets/phones.png';
 import right from '../assets/right-red.png';
 import background3 from '../assets/background3.png';
 import background4 from '../assets/background4.png';
-import talk from '../assets/talk.png';
 import megaphone from '../assets/megaphone.png';
 import mail from '../assets/mail.png';
 import whatsapp from '../assets/whatsapp.png';

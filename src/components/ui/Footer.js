@@ -1,11 +1,9 @@
 import { Hidden, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
-import footerAdornment from '../../assets/Footer Adornment.svg'
+
 import Grid from '@material-ui/core/Grid'
 import { Link } from 'react-router-dom'
-import facebook from '../../assets/facebook.svg'
-import instagram from '../../assets/instagram.svg'
-import twitter from '../../assets/twitter.svg'
+
 import googleplay from '../../assets/googleplay.png';
 
 const useStyles = makeStyles(theme => ({
