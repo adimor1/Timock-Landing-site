@@ -429,7 +429,7 @@ export default function LandingPage(props) {
             </Grid>
             <Grid item style={{ marginTop: "0.7em" }}>
               <Typography variant='h5'  >
-                BASIC
+                Basic
               </Typography>
             </Grid>
             <Grid>
