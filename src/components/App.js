@@ -7,6 +7,7 @@ import Footer from './ui/Footer';
 import LandingPage from './LandingPage';
 import Technologies from './Technologies';
 import About from './About';
+import Contact from './Contact';
 import ReactDOM from "react-dom";
 import ScrollToTop from './ScrollToTop';
 
@@ -22,40 +23,49 @@ function App() {
           selectedIndex={selectedIndex}
           setSelectedIndex={setSelectedIndex}
         />
-     
-          <ScrollToTop/>
+
+        <ScrollToTop />
         <Switch>
-        
-            <Route
-              exact
-              path="/"
-              render={(props) => <LandingPage
-                {...props}
-                setValue={setValue}
-                setSelectedIndex={setSelectedIndex}
-              />}
-            />
-            <Route
-              exact
-              path="/technologies"
-              render={(props) => <Technologies
-                {...props}
-                setValue={setValue}
-                setSelectedIndex={setSelectedIndex}
-              />}
-            />
-         <Route
-              exact
-              path="/about"
-              render={(props) => <About
-                {...props}
-                setValue={setValue}
-                setSelectedIndex={setSelectedIndex}
-              />}
-            />
+
+          <Route
+            exact
+            path="/"
+            render={(props) => <LandingPage
+              {...props}
+              setValue={setValue}
+              setSelectedIndex={setSelectedIndex}
+            />}
+          />
+          <Route
+            exact
+            path="/technologies"
+            render={(props) => <Technologies
+              {...props}
+              setValue={setValue}
+              setSelectedIndex={setSelectedIndex}
+            />}
+          />
+          <Route
+            exact
+            path="/about"
+            render={(props) => <About
+              {...props}
+              setValue={setValue}
+              setSelectedIndex={setSelectedIndex}
+            />}
+          />
+          <Route
+            exact
+            path="/contact"
+            render={(props) => <Contact
+              {...props}
+              setValue={setValue}
+              setSelectedIndex={setSelectedIndex}
+            />}
+          />
         </Switch>
-      
-      
+
+
         <Footer value={value} setValue={setValue} selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex} />
       </BrowserRouter>
     </ThemeProvider>
