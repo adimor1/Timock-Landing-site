@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
         position: "absolute",
         [theme.breakpoints.down("md")]: {
             justifyContent: "flex-end",
-            marginRight: "5em"
+            
         },
         [theme.breakpoints.down("xs")]: {
             justifyContent: "flex-end"

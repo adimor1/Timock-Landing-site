@@ -33,20 +33,9 @@ export default createTheme({
         h2:{
             fontFamily:"Raleway", 
             fontWeight:700, 
-            fontSize: "4.5rem",
+            fontSize: "3.5rem",
             color: "black",
             lineHeight:1.5
-        },
-        h3:{
-            fontFamily:"Pacifico", 
-            fontSize: "2.5rem",
-            color: arcBlue,
-        },
-        h4:{
-            fontFamily:"Raleway", 
-            fontSize: "1.75rem",
-            color: arcBlue,
-            fontWeight: 700
         },
         h5:{
             fontFamily:"Raleway", 
@@ -54,23 +43,11 @@ export default createTheme({
             color: arcGrey,
             fontWeight: 700
         },
-        subtitle1:{
-            fontSize: "2.5rem",
-            color: arcGrey,
-            fontWeight: 300
-        },
         subtitle2:{
             fontSize: "2rem",
             color: arcGrey,
             fontWeight: 300
         },
-        subtitle3:{
-            fontSize: "1rem",
-            color: arcGrey,
-            fontWeight: 300
-        },
-
-
         learnButton:{
             borderColor: arcBlue,
             color: arcBlue,

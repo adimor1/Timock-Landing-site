@@ -104,6 +104,18 @@ const useStyle = makeStyles(theme => ({
       width: "28em",
     }
   },
+  blueBackground: {
+    backgroundImage: `url(${backgroundbg})`,
+    backgroundSize: "cover",
+    height: "33em",
+    width: "40em",
+
+    [theme.breakpoints.down("sm")]: {
+      marginRight: "0em",
+      height: "25em",
+      width: "30em",
+    }
+  },
   howBackground: {
     backgroundImage: `url(${howBackground})`,
     height: "100%",
@@ -129,16 +141,6 @@ const useStyle = makeStyles(theme => ({
     width: "8em",
     marginTop: "1em"
   },
-  blueBackground: {
-    backgroundImage: `url(${backgroundbg})`,
-    backgroundSize: "cover",
-    height: "35em",
-    width: "43em",
-    [theme.breakpoints.down("sm")]: {
-      height: "28em",
-      width: "28em",
-    }
-  },
   howIcon: {
     position: "absolute",
     height: "10em",
@@ -157,15 +159,15 @@ export default function LandingPage(props) {
 
       {/*---welcome---*/}
       <Grid item>
-        <Grid container style={{ marginBottom: "5em", marginTop: "4em" }} alignItems="center" direction='row'  >
+        <Grid container style={{ marginBottom: "5em", marginTop: "4em" }} direction={matchesSM ? "column" : "row"}  >
           <Grid item>
-            <img className={classes.blueBackground} src={phones} alt="lightbulb" style={{ marginRight: "5em" }} />
+            <img className={classes.blueBackground} src={phones} alt="lightbulb" />
           </Grid>
-          <Grid align='center' >
+          <Grid align='center' alignItems="flex-end" style={{ marginTop: matchesXS ? 0 : matchesSM ? "2em" : "5em", flexGrow: "1",  marginLeft: "3em", marginRight: "3em" }}   >
             <Typography variant='h2'  >
               Time Tracking <br /> For Your Business
             </Typography>
-            <Typography variant='subtitle1' >
+            <Typography variant='subtitle2' >
               Free. Newest Technologies. Friendly.
             </Typography>
             <Grid item component={"a"} href="https://play.google.com/store/apps" rel="noopener noreferrer" target="_blank">
@@ -177,24 +179,28 @@ export default function LandingPage(props) {
 
       {/*---Technologies---*/}
       <Grid >
-        <Grid align='center' style={{ marginTop: "5em" }}  >
+        <Grid align='center' style={{ marginTop: "5em", marginLeft: "3em", marginRight: "3em" }}  >
           <Typography variant='h2' >
             Our Technologies - Your Choice
           </Typography>
-          <Typography variant='subtitle2' >
-            We offer a variety of technologies that do not exist in the market.
-          </Typography>
-          <Typography variant='subtitle2' >
-            These technologies will make it easier for your employees to document their work hours.
-          </Typography>
-          <Typography variant='subtitle2' >
-            <br />
-            you will only have to  {" "}
-            <span className={classes.specialtext}>choose</span>
-          </Typography>
+          <Grid >
+            <Typography variant='subtitle2'  >
+              We offer a variety of technologies that do not exist in the market.
+            </Typography>
+            <Typography variant='subtitle2'>
+              These technologies will make it easier for your employees to document their work hours.
+            </Typography>
+            <Typography variant='subtitle2'  >
+              <br />
+              you will only have to  {" "}
+              <span className={classes.specialtext}>choose</span>
+            </Typography>
+          </Grid>
         </Grid>
 
         <Grid item container direction='row' justify='center' style={{ marginTop: "3em", marginBottom: "3em" }} >
+
+
           <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em" }} >
             <Grid item>
               <Grid container alignItems='center' justify="center">
@@ -232,6 +238,8 @@ export default function LandingPage(props) {
             <Grid>
             </Grid>
           </Grid>
+
+
 
           <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em" }} >
             <Grid item>
@@ -272,6 +280,8 @@ export default function LandingPage(props) {
             <Grid>
             </Grid>
           </Grid>
+
+
         </Grid>
 
         <Grid item container direction='row' justify='center' style={{ marginBottom: "3em" }} >
@@ -369,17 +379,17 @@ export default function LandingPage(props) {
       </Grid>
 
       <Grid item>{/*--- How it work 1-2---*/}
-        <Grid container style={{ height: "50em", marginTop:"5em" }} alignItems="center" direction='row' 
+        <Grid container style={{ height: "50em", marginTop: "5em" }} alignItems="center" direction='row'
           className={classes.howBackground}>
 
-          <Grid container align='center' style={{ marginTop: "2em" }}  direction='row' justify="center" >
+          <Grid container align='center' style={{ marginTop: "2em" }} direction='row' justify="center" >
             <Typography variant='h2' >
-              How It Works?
+              How Does It Work?
             </Typography>
           </Grid>
 
           <Grid item>
-            <Grid container direction='row' justify={matchesSM ? "center" : undefined} className={classes.howContainer}>
+            <Grid container direction={matchesSM? "column": "row"} justify={matchesSM ? "center" : undefined} className={classes.howContainer} style={{marginBottom:matchesSM?"12em":"0em"}}>
               <Grid item style={{ marginLeft: matchesSM ? 0 : "5em", textAlign: matchesSM ? "center" : undefined }}>
                 <Typography variant="h4">
                   Definitions
@@ -391,13 +401,13 @@ export default function LandingPage(props) {
                   Select options for entering work hours
                 </Typography>
               </Grid>
-              <Grid item>
+              <Grid item justifyContent='center'>
                 <img className={classes.howIcon} alt="custom software icon" src={config} />
               </Grid>
             </Grid>
           </Grid>
 
-          <Grid container direction='row' justify={matchesSM ? "center" : "flex-end"} className={classes.howContainer} style={{ marginTop: matchesSM ? "1em" : "8em" }}>
+          <Grid container direction='row' justify={matchesSM ? "center" : "flex-end"} className={classes.howContainer} style={{marginBottom:matchesSM?"12em":"0em"}}>
             <Grid item style={{ textAlign: matchesSM ? "center" : undefined, width: matchesSM ? undefined : "35em" }}>
               <Typography variant="h4">
                 Add Employees
@@ -415,7 +425,7 @@ export default function LandingPage(props) {
           </Grid>
 
           <Grid item>
-            <Grid container direction='row' justify={matchesSM ? "center" : undefined} className={classes.howContainer}>
+            <Grid container direction='row' justify={matchesSM ? "center" : undefined} className={classes.howContainer} style={{marginBottom:matchesSM?"12em":"0em"}}>
               <Grid item style={{ marginLeft: matchesSM ? 0 : "5em", textAlign: matchesSM ? "center" : undefined }}>
                 <Typography variant="h4">
                   Documentation Working Hours
@@ -433,7 +443,7 @@ export default function LandingPage(props) {
             </Grid>
           </Grid>
 
-          <Grid container direction='row' justify={matchesSM ? "center" : "flex-end"} className={classes.howContainer} style={{ marginTop: matchesSM ? "1em" : "5em" }}>
+          <Grid container direction='row' justify={matchesSM ? "center" : "flex-end"} className={classes.howContainer} style={{marginBottom:matchesSM?"12em":"0em"}}>
             <Grid item style={{ textAlign: matchesSM ? "center" : undefined, width: matchesSM ? undefined : "35em" }}>
               <Typography variant="h4">
                 Generate reports
@@ -450,7 +460,7 @@ export default function LandingPage(props) {
             </Grid>
           </Grid>
 
-          <Grid container justify="center" className={classes.buttonContainer} style={{ marginBottom: "7em", marginTop: "4em" }}>
+          <Grid container justify="center" className={classes.buttonContainer} style={{ marginTop: "4em", marginBottom:matchesSM?"12em":"7em"}}>
             <Grid item>
               <Button component={Link} to="/estimate" className={classes.downloadButton} onClick={() => props.setValue(5)} variant="contained">Free Download</Button>
             </Grid>
@@ -464,14 +474,14 @@ export default function LandingPage(props) {
         </Grid>
       </Grid>
 
-      <Grid item>{/*--- how it work 3-4---*/}
-        <Grid container style={{ height: "45em" }} alignItems="center" direction='row'
+      <Grid item style={{ marginTop:matchesSM?"10em":"0em" }}>{/*--- how it work 3-4---*/}
+        <Grid container style={{ height: "45em" }} alignItems="center" direction='row' 
           className={classes.howBackground2}>
         </Grid>
       </Grid>
 
       <Grid item>{/*---Lets talk---*/}
-        <Grid container direction='row' justify="flex-end" style={{ marginTop: "8em" }}>
+        <Grid container direction='row' justify="flex-end" style={{ marginTop:matchesSM?"90em":"0em" }}>
           <Grid sm item style={{ margin: "auto" }}>
             <Typography variant="h2" align='center'>
               Let's Talk!
