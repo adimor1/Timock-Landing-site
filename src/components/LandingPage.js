@@ -172,6 +172,7 @@ export default function LandingPage(props) {
           </Grid>
           <Grid align='center' alignItems="flex-end" style={{ marginTop: matchesXS ? 0 : matchesSM ? "2em" : "5em", flexGrow: "1", marginLeft: "3em", marginRight: "3em" }}   >
             <Typography variant='h2'  >
+              
               Time Tracking <br /> For Your Business
             </Typography>
             <Typography variant='subtitle2' >
@@ -378,7 +379,7 @@ export default function LandingPage(props) {
           <Button component={Link} to="/estimate" className={classes.downloadButton} onClick={() => props.setValue(5)} variant="contained">Free Download</Button>
         </Grid>
         <Grid item>
-          <Button component={Link} to="/revolution" variant="outlined" onClick={() => props.setValue(2)} className={classes.learnButton}>
+          <Button component={Link} to="/technologies" variant="outlined" onClick={() => props.setValue(1)} className={classes.learnButton}>
             <span style={{ marginRight: 10 }}>Learn More</span>
             <ButtonArrow width={15} height={15} fill={theme.palette.common.blue} />
           </Button>
