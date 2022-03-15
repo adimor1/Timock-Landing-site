@@ -173,12 +173,12 @@ export default function LandingPage(props) {
           </Grid>
           <Grid align='center' alignItems="flex-end" style={{ marginTop: matchesXS ? 0 : matchesSM ? "2em" : "5em", flexGrow: "1", marginLeft: "3em", marginRight: "3em" }}   >
             <Typography variant='h2'  >
-
-
               Time Tracking <br /> For Your Business
             </Typography>
             <Typography variant='subtitle2' >
-              Free. Newest Technologies. Friendly.
+          
+                Free. Newest Technologies. Friendly.
+         
             </Typography>
             <Grid item component={"a"} href="https://play.google.com/store/apps" rel="noopener noreferrer" target="_blank">
               <img className={classes.googleplayImage} src={googleplay} alt="lightbulb" />
@@ -214,10 +214,12 @@ export default function LandingPage(props) {
           </Grid>
         </Grid>
 
-        <Grid item container direction='row' justify='center' style={{ marginTop: "3em", marginBottom: "3em" }} >
 
 
-          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em" }} >
+        <Grid item container direction='row' justify='center' style={{ marginBottom: "3em", marginTop:"5em", padding:"1em"}} >
+
+          
+        <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em", marginLeft:"0.1em" }} >
             <Grid item>
               <Grid container alignItems='center' justify="center">
                 <Card className={classes.technologiesCard}>
@@ -235,7 +237,7 @@ export default function LandingPage(props) {
             </Grid>
 
           </Grid>
-          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em" }} >
+          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em",  marginLeft:"0.1em" }} >
             <Grid item>
               <Grid container alignItems='center' justify="center">
                 <Card className={classes.technologiesCard} >
@@ -255,9 +257,7 @@ export default function LandingPage(props) {
             </Grid>
           </Grid>
 
-
-
-          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em" }} >
+          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em",  marginLeft:"0.1em"}} >
             <Grid item>
               <Grid container alignItems='center' justify="center">
                 <Card className={classes.technologiesCard}>
@@ -276,37 +276,12 @@ export default function LandingPage(props) {
             <Grid>
             </Grid>
           </Grid>
-
-          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em" }} >
+          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em",   marginLeft:"0.1em" }} >
             <Grid item>
               <Grid container alignItems='center' justify="center">
                 <Card className={classes.technologiesCard}>
                   <CardContent>
-                    <img className={classes.icon} src={orange} alt="lightbulb" justify="center" style={{ opacity: 0.3 }} />
-                    <NfcIcon className={classes.icon} style={{ fontSize: "8rem" }} />
-                  </CardContent>
-                </Card>
-              </Grid>
-            </Grid>
-            <Grid item style={{ marginTop: "0.7em" }}>
-              <Typography variant='h5'  >
-                NFC
-              </Typography>
-            </Grid>
-            <Grid>
-            </Grid>
-          </Grid>
-
-
-        </Grid>
-
-        <Grid item container direction='row' justify='center' style={{ marginBottom: "3em" }} >
-          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em" }} >
-            <Grid item>
-              <Grid container alignItems='center' justify="center">
-                <Card className={classes.technologiesCard}>
-                  <CardContent>
-                    <img className={classes.icon} src={purple} alt="lightbulb" justify="center" style={{ opacity: 0.2 }} />
+                    <img className={classes.icon} src={orange} alt="lightbulb" justify="center" style={{ opacity: 0.2 }} />
                     <WifiIcon className={classes.icon} style={{ fontSize: "8rem" }} />
                   </CardContent>
                 </Card>
@@ -319,7 +294,7 @@ export default function LandingPage(props) {
               </Typography>
             </Grid>
           </Grid>
-          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em" }} >
+          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em" ,  marginLeft:"0.1em"}} >
             <Grid item>
               <Grid container alignItems='center' justify="center">
                 <Card className={classes.technologiesCard}>
@@ -339,7 +314,7 @@ export default function LandingPage(props) {
             </Grid>
           </Grid>
 
-          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em" }} >
+          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em" ,  marginLeft:"0.2em"}} >
             <Grid item>
               <Grid container alignItems='center' justify="center">
                 <Card className={classes.technologiesCard}>
@@ -353,26 +328,6 @@ export default function LandingPage(props) {
             <Grid item style={{ marginTop: "0.7em" }}>
               <Typography variant='h5'  >
                 HCE
-              </Typography>
-            </Grid>
-            <Grid>
-            </Grid>
-          </Grid>
-
-          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em" }} >
-            <Grid item>
-              <Grid container alignItems='center' justify="center">
-                <Card className={classes.technologiesCard}>
-                  <CardContent>
-                    <img className={classes.icon} src={gray} alt="lightbulb" justify="center" style={{ opacity: 0.15 }} />
-                    <TouchAppIcon className={classes.icon} style={{ fontSize: "8rem" }} />
-                  </CardContent>
-                </Card>
-              </Grid>
-            </Grid>
-            <Grid item style={{ marginTop: "0.7em" }}>
-              <Typography variant='h5'  >
-                Touch ID
               </Typography>
             </Grid>
             <Grid>

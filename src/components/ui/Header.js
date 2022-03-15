@@ -262,6 +262,7 @@ export default function Header(props) {
                 onClose={() => setOpenDrawer(false)}
                 onOpen={() => setOpenDrawer(true)}
                 classes={{ paper: classes.drawer }}
+        
             >
                 <div className={classes.toolbarMargin} />
                 <List disablePadding>
@@ -273,6 +274,7 @@ export default function Header(props) {
                             component={Link}
                             to={route.link}
                             selected={props.value === route.activeIndex}
+                            
                             classes={{ selected: classes.drawerItemSelected }}
                             onClick={() => {
                                 setOpenDrawer(false);
@@ -286,25 +288,7 @@ export default function Header(props) {
                             </ListItemText>
                         </ListItem>
                     ))}
-                    <ListItem
-                        onClick={
-                            () => {
-                                setOpenDrawer(false);
-                                props.setValue(5);
-                            }}
-                        divider
-                        button
-                        classes={{
-                            root: classes.drawerItemEstimate,
-                            selected: classes.drawerItemSelected
-                        }}
-                        component={Link}
-                        to="/estimate"
-                        selected={props.value === 5}>
-                        <ListItemText className={classes.drawerItem}>
-                            Free Estimate
-                        </ListItemText>
-                    </ListItem>
+         
                 </List>
             </SwipeableDrawer>
             <IconButton className={classes.drawerIconContainer}

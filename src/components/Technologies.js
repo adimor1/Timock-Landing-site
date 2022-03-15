@@ -227,15 +227,17 @@ export default function LandingPage(props) {
                             <Typography variant="h4">
                                 {" "}
                                 <span className={classes.specialtext}>04 </span>
-                                NPC
+                                WIFI
                             </Typography>
                             <Typography variant="subtitle2" className={classes.subtitle}>
-                                You can put an NFC tag in the office when the employee reports attendance he will attach the back of his phone to the NFC tag.
-                                This method assures you that the employee is present at the workplace while reporting attendance.
+                            You can decide that attendance reporting will be done through the WIFI of the workplace.
+                                    Attendance Administrator will record in the app the IP addresses of your WIFI in the workplace.
+                                    When the employee registers a presence, the system will recognize his IP address and indicate that this employee has registered an office presence and his IP address.
+                                    This option will only be possible if you enter the WIFI IP addresses.
                             </Typography>
                         </Grid>
                         <Grid item style={{ marginRight: matchesSM ? 0 : "15em" }}>
-                            <img className={classes.howIcon} alt="mobile phone icon" src={nfc} width="250em" />
+                            <img className={classes.howIcon} alt="mobile phone icon" src={wifi} width="250em" />
                         </Grid>
                     </Grid>
 
@@ -246,17 +248,14 @@ export default function LandingPage(props) {
                                 <Typography variant="h4">
                                     {" "}
                                     <span className={classes.specialtext}>05 </span>
-                                    WIFI
+                                    Basic
                                 </Typography>
                                 <Typography variant="subtitle2">
-                                    You can decide that attendance reporting will be done through the WIFI of the workplace.
-                                    Attendance Administrator will record in the app the IP addresses of your WIFI in the workplace.
-                                    When the employee registers a presence, the system will recognize his IP address and indicate that this employee has registered an office presence and his IP address.
-                                    This option will only be possible if you enter the WIFI IP addresses.
+                                You can register attendance without any location  technological but on trust in the employee.
                                 </Typography>
                             </Grid>
                             <Grid item>
-                                <img className={classes.howIcon} alt="custom software icon" src={wifi} />
+                                <img className={classes.howIcon} alt="custom software icon" src={basic} />
                             </Grid>
                         </Grid>
                     </Grid>
@@ -266,27 +265,10 @@ export default function LandingPage(props) {
                             <Typography variant="h4">
                                 {" "}
                                 <span className={classes.specialtext}>06 </span>
-                                Basic
+                                HCE
                             </Typography>
                             <Typography variant="subtitle2" className={classes.subtitle}>
-                                You can register attendance without any location  technological but on trust in the employee.
-                            </Typography>
-                        </Grid>
-                        <Grid item style={{ marginRight: matchesSM ? 0 : "15em" }}>
-                            <img className={classes.howIcon} alt="mobile phone icon" src={basic} width="250em" />
-                        </Grid>
-                    </Grid>
-
-                    <Grid item>
-                        <Grid container direction='row' justify={matchesSM ? "center" : undefined} className={classes.howContainer} >
-                            <Grid item style={{ marginLeft: matchesSM ? 0 : "5em", textAlign: matchesSM ? "center" : undefined, width: matchesSM ? undefined : "35em" }}>
-                                <Typography variant="h4">
-                                    {" "}
-                                    <span className={classes.specialtext}>07 </span>
-                                    HCE
-                                </Typography>
-                                <Typography variant="subtitle2">
-                                    HCE (Host card emulation)  is base on NFC technology.
+                            HCE (Host card emulation)  is base on NFC technology.
                                     Every employee who installs the app turns his phone into an attendance card.
                                     First option -  You can decide that the phones of the supervisor or team leader or secretary will be  attendance card (HCE) reader on demand.
                                     When the employee comes to work he attaches the back of his phone to the phone of the supervisor,
@@ -294,37 +276,14 @@ export default function LandingPage(props) {
                                     Second option - You can take an old or cheap phone and turn it into  a 24/7 attendance card reader.
                                     This option simulates a time attendance system which is hung on the wall. Place the phone with its back up and the employees
                                     will attach their phone to the back of this device and thus record attendance.
-                                </Typography>
-                            </Grid>
-                            <Grid item>
-                                <img className={classes.howIcon} alt="custom software icon" src={hce} />
-                            </Grid>
-                        </Grid>
-                    </Grid>
-
-                    <Grid container direction='row' justify={matchesSM ? "center" : "flex-end"} className={classes.howContainer} >
-                        <Grid item style={{ textAlign: matchesSM ? "center" : undefined, width: matchesSM ? undefined : "35em" }}>
-                            <Typography variant="h4">
-                                {" "}
-                                <span className={classes.specialtext}>08 </span>
-                                Touch ID
-                            </Typography>
-                            <Typography variant="subtitle2" className={classes.subtitle}>
-                                You can add your employees to the database by fingerprinting
                             </Typography>
                         </Grid>
                         <Grid item style={{ marginRight: matchesSM ? 0 : "15em" }}>
-                            <img className={classes.howIcon} alt="mobile phone icon" src={touchid} width="250em" />
+                            <img className={classes.howIcon} alt="mobile phone icon" src={hce} width="250em" />
                         </Grid>
                     </Grid>
-
-
                 </Grid>
             </Grid>
-
-
-
-
         </Grid>
     );
 }
