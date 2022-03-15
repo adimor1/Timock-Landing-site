@@ -8,6 +8,7 @@ import LandingPage from './LandingPage';
 import Technologies from './Technologies';
 
 import ReactDOM from "react-dom";
+import ScrollToTop from './ScrollToTop';
 
 function App() {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -21,28 +22,32 @@ function App() {
           selectedIndex={selectedIndex}
           setSelectedIndex={setSelectedIndex}
         />
+     
+          <ScrollToTop/>
         <Switch>
-
-          <Route
-            exact
-            path="/"
-            render={(props) => <LandingPage
-              {...props}
-              setValue={setValue}
-              setSelectedIndex={setSelectedIndex}
-            />}
-          />
-          <Route
-            exact
-            path="/technologies"
-            render={(props) => <Technologies
-              {...props}
-              setValue={setValue}
-              setSelectedIndex={setSelectedIndex}
-            />}
-          />
+        
+            <Route
+              exact
+              path="/"
+              render={(props) => <LandingPage
+                {...props}
+                setValue={setValue}
+                setSelectedIndex={setSelectedIndex}
+              />}
+            />
+            <Route
+              exact
+              path="/technologies"
+              render={(props) => <Technologies
+                {...props}
+                setValue={setValue}
+                setSelectedIndex={setSelectedIndex}
+              />}
+            />
+        
         </Switch>
-
+      
+      
         <Footer value={value} setValue={setValue} selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex} />
       </BrowserRouter>
     </ThemeProvider>
