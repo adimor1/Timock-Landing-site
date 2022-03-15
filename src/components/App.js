@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom"
 import Footer from './ui/Footer';
 import LandingPage from './LandingPage';
 import Technologies from './Technologies';
-
+import About from './About';
 import ReactDOM from "react-dom";
 import ScrollToTop from './ScrollToTop';
 
@@ -44,7 +44,15 @@ function App() {
                 setSelectedIndex={setSelectedIndex}
               />}
             />
-        
+         <Route
+              exact
+              path="/about"
+              render={(props) => <About
+                {...props}
+                setValue={setValue}
+                setSelectedIndex={setSelectedIndex}
+              />}
+            />
         </Switch>
       
       
