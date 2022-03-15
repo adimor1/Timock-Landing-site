@@ -166,25 +166,7 @@ export default function Header(props) {
 
     const menuOptions = useMemo(
         () => [
-            { name: "Services", link: "/services", activeIndex: 1, selectedIndex: 0 },
-            {
-                name: "Custom Software Development",
-                link: "/customsoftware",
-                activeIndex: 1,
-                selectedIndex: 1,
-            },
-            {
-                name: "IOS/Android App Development",
-                link: "/mobileapps",
-                activeIndex: 1,
-                selectedIndex: 2,
-            },
-            {
-                name: "Website Development",
-                link: "/websites",
-                activeIndex: 1,
-                selectedIndex: 3,
-            },
+
         ],
         []
     );
@@ -192,10 +174,9 @@ export default function Header(props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const routes = [
         { name: "Home", link: "/", activeIndex: 0 },
-        { name: "Services", link: "/services", activeIndex: 1, ariaOwns: anchorEl ? "simple-menu" : undefined, ariaPopup: anchorEl ? "true" : undefined, mouseOver: (event) => handleClick(event) },
-        { name: "The Revolution", link: "/therevolution", activeIndex: 2 },
-        { name: "About us", link: "/about", activeIndex: 3 },
-        { name: "Contact Us", link: "/contact", activeIndex: 4 },
+        { name: "Our Technologies", link: "/technologies", activeIndex:1 },
+        { name: "About us", link: "/about", activeIndex: 2 },
+        { name: "Contact Us", link: "/contact", activeIndex: 3 },
     ];
 
     useEffect(() => {
