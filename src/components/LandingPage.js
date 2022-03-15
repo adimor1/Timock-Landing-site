@@ -71,7 +71,8 @@ const useStyle = makeStyles(theme => ({
   howContainer: {
     marginTop: "5em",
     [theme.breakpoints.down("sm")]: {
-      padding: 25
+      padding: 25,
+      marginTop: "0em",
     }
   },
   technologiesCard: {
@@ -142,9 +143,15 @@ const useStyle = makeStyles(theme => ({
     marginTop: "1em"
   },
   howIcon: {
-   
+    position: "absolute",
     height: "10em",
     width: "10em",
+    [theme.breakpoints.down("xs")]: {
+      position: "unset"
+    },
+    [theme.breakpoints.down("sm")]: {
+      position: "unset"
+    }
   },
 }))
 
@@ -163,7 +170,7 @@ export default function LandingPage(props) {
           <Grid item>
             <img className={classes.blueBackground} src={phones} alt="lightbulb" />
           </Grid>
-          <Grid align='center' alignItems="flex-end" style={{ marginTop: matchesXS ? 0 : matchesSM ? "2em" : "5em", flexGrow: "1",  marginLeft: "3em", marginRight: "3em" }}   >
+          <Grid align='center' alignItems="flex-end" style={{ marginTop: matchesXS ? 0 : matchesSM ? "2em" : "5em", flexGrow: "1", marginLeft: "3em", marginRight: "3em" }}   >
             <Typography variant='h2'  >
               Time Tracking <br /> For Your Business
             </Typography>
@@ -382,22 +389,20 @@ export default function LandingPage(props) {
         <Grid container style={{ height: "50em", marginTop: "5em" }} alignItems="center" direction='row'
           className={classes.howBackground}>
 
-          <Grid container align='center' style={{ marginTop: "2em" }} direction='row' justify="center" >
+          <Grid container align='center' style={{ marginTop: "2em", marginBottom: "5em" }} direction='row' justify="center" >
             <Typography variant='h2' >
               How Does It Work?
             </Typography>
           </Grid>
 
           <Grid item>
-            <Grid container direction={matchesSM? "column": "row"}  className={classes.howContainer} style={{  textAlign: matchesSM ? "center" : undefined}} >
-              <Grid item >
+            <Grid container direction='row' justify={matchesSM ? "center" : undefined} className={classes.howContainer} >
+              <Grid item style={{ marginLeft: matchesSM ? 0 : "5em", textAlign: matchesSM ? "center" : undefined, width: matchesSM ? undefined : "35em" }}>
                 <Typography variant="h4">
                   Definitions
                 </Typography>
                 <Typography variant="subtitle2">
                   Set up branches of your business
-                </Typography>
-                <Typography variant="subtitle2">
                   Select options for entering work hours
                 </Typography>
               </Grid>
@@ -413,9 +418,7 @@ export default function LandingPage(props) {
                 Add Employees
               </Typography>
               <Typography variant="subtitle2" className={classes.subtitle}>
-                Add employees to your business
-              </Typography>
-              <Typography variant="subtitle2" className={classes.subtitle}>
+                Add employees to your business <br />
                 They will receive a personal code that keeps a promise
               </Typography>
             </Grid>
@@ -426,14 +429,13 @@ export default function LandingPage(props) {
 
           <Grid item>
             <Grid container direction='row' justify={matchesSM ? "center" : undefined} className={classes.howContainer} >
-              <Grid item style={{ marginLeft: matchesSM ? 0 : "5em", textAlign: matchesSM ? "center" : undefined }}>
+              <Grid item style={{ marginLeft: matchesSM ? 0 : "5em", textAlign: matchesSM ? "center" : undefined, width: matchesSM ? undefined : "35em" }}>
                 <Typography variant="h4">
                   Documentation Working Hours
                 </Typography>
                 <Typography variant="subtitle2">
-                  Employees will report work start and <br /> work hours
-                </Typography>
-                <Typography variant="subtitle2">
+                  Employees will report when they start the work and when they finished
+                  <br />
                   We will detect exceptional cases
                 </Typography>
               </Grid>
@@ -450,9 +452,8 @@ export default function LandingPage(props) {
               </Typography>
               <Typography variant="subtitle2" className={classes.subtitle}>
                 You can generate different reports
-              </Typography>
-              <Typography variant="subtitle2" className={classes.subtitle}>
-                In cross-sections of certain workers <br /> or a certain time
+                <br />
+                In cross-sections of certain workers or a certain time
               </Typography>
             </Grid>
             <Grid item style={{ marginRight: matchesSM ? 0 : "15em" }}>
@@ -460,7 +461,7 @@ export default function LandingPage(props) {
             </Grid>
           </Grid>
 
-          <Grid container justify="center" className={classes.buttonContainer} style={{ marginTop: "4em", marginBottom:matchesSM?"12em":"7em"}}>
+          <Grid container justify="center" className={classes.buttonContainer} style={{ marginTop: "4em", marginBottom: matchesSM ? "12em" : "7em" }}>
             <Grid item>
               <Button component={Link} to="/estimate" className={classes.downloadButton} onClick={() => props.setValue(5)} variant="contained">Free Download</Button>
             </Grid>
@@ -474,22 +475,22 @@ export default function LandingPage(props) {
         </Grid>
       </Grid>
 
-      <Grid item style={{ marginTop:matchesSM?"0em":"0em" }}>{/*--- how it work 3-4---*/}
-        <Grid container style={{ height: "45em" }} alignItems="center" direction='row' 
+      <Grid item style={{ marginTop: matchesXS ? "25em" : matchesSM ? "5em" : "0em" }}>{/*--- how it work 3-4---*/}
+        <Grid container style={{ height: "45em" }} alignItems="center" direction='row'
           className={classes.howBackground2}>
         </Grid>
       </Grid>
 
       <Grid item>{/*---Lets talk---*/}
-        <Grid container direction='row' justify="flex-end" style={{ marginTop:matchesSM?"90em":"0em" }}>
-          <Grid sm item style={{ margin: "auto" }}>
+        <Grid container direction='row' justify="flex-end" style={{ marginTop: matchesSM ? "30em" : "4em" }}>
+          <Grid item style={{ margin: "auto" }}>
             <Typography variant="h2" align='center'>
               Let's Talk!
             </Typography>
             <Typography variant="subtitle2" align='center'>
               We are here for you  <br /> for any question or request.
             </Typography>
-            <Grid container justify="center" className={classes.buttonContainer}>
+            <Grid direction='row' container justify="center" className={classes.buttonContainer}>
               <Grid item component={"a"} href="https://play.google.com/store/apps" rel="noopener noreferrer" target="_blank">
                 <img className={classes.mail} src={mail} alt="lightbulb" />
               </Grid>
