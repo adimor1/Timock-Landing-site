@@ -21,6 +21,7 @@ import touchid from '../assets/touchid.png';
 import right from '../assets/right-red.png';
 import howBackground from '../assets/backgroundtec.png';
 import Typical from 'react-typical'
+import AnimatedText from 'react-animated-text-content';
 
 const useStyle = makeStyles(theme => ({
 
@@ -129,20 +130,18 @@ export default function LandingPage(props) {
 
     return (
         <Grid container direction='column'>
-
-
-
             <Grid item>{/*--- How it work 1-2---*/}
                 <Grid container alignItems="center" direction='row'
                     className={classes.howBackground}>
-
-
-
-                    <Grid container align='center' style={{ marginTop: "5em", marginRight:"3em", marginLeft:"3em" }} direction='row' justify="center" >
+                    <Grid container align='center' style={{ marginTop: "5em", marginRight: "3em", marginLeft: "3em" }} direction='row' justify="center" >
                         <Typography variant='h2' >
 
-                            Our Technologies
-
+                            <AnimatedText
+                                type="words"
+                                animationType="float"
+                            >
+                                Our Technologies
+                            </AnimatedText>
 
                         </Typography>
                         <Grid >

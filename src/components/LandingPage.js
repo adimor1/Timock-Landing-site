@@ -37,6 +37,7 @@ import WifiIcon from '@mui/icons-material/Wifi';
 import ModeEditIcon from '@mui/icons-material/ModeEdit';
 import StyleIcon from '@mui/icons-material/Style';
 import TouchAppIcon from '@mui/icons-material/TouchApp';
+import AnimatedText from 'react-animated-text-content';
 
 const useStyle = makeStyles(theme => ({
 
@@ -172,7 +173,8 @@ export default function LandingPage(props) {
           </Grid>
           <Grid align='center' alignItems="flex-end" style={{ marginTop: matchesXS ? 0 : matchesSM ? "2em" : "5em", flexGrow: "1", marginLeft: "3em", marginRight: "3em" }}   >
             <Typography variant='h2'  >
-              
+
+
               Time Tracking <br /> For Your Business
             </Typography>
             <Typography variant='subtitle2' >
@@ -189,7 +191,13 @@ export default function LandingPage(props) {
       <Grid >
         <Grid align='center' style={{ marginTop: "5em", marginLeft: "3em", marginRight: "3em" }}  >
           <Typography variant='h2' >
-            Our Technologies - Your Choice
+            <AnimatedText
+              type="words"
+              animationType="float"
+            >
+              Our Technologies - Your Choice
+            </AnimatedText>
+
           </Typography>
           <Grid >
             <Typography variant='subtitle2'  >
@@ -392,7 +400,13 @@ export default function LandingPage(props) {
 
           <Grid container align='center' style={{ marginTop: "2em", marginBottom: "5em" }} direction='row' justify="center" >
             <Typography variant='h2' >
+            <AnimatedText
+              type="words"
+              animationType="float"
+            >
               How Does It Work?
+            </AnimatedText>
+             
             </Typography>
           </Grid>
 
@@ -486,7 +500,13 @@ export default function LandingPage(props) {
         <Grid container direction='row' justify="flex-end" style={{ marginTop: matchesSM ? "30em" : "4em" }}>
           <Grid item style={{ margin: "auto" }}>
             <Typography variant="h2" align='center'>
-              Let's Talk!
+            <AnimatedText
+              type="words"
+              animationType="float"
+            >
+               Let's Talk!
+            </AnimatedText>
+             
             </Typography>
             <Typography variant="subtitle2" align='center'>
               We are here for you  <br /> for any question or request.
