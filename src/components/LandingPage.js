@@ -142,7 +142,7 @@ const useStyle = makeStyles(theme => ({
     marginTop: "1em"
   },
   howIcon: {
-    position: "absolute",
+   
     height: "10em",
     width: "10em",
   },
@@ -389,8 +389,8 @@ export default function LandingPage(props) {
           </Grid>
 
           <Grid item>
-            <Grid container direction={matchesSM? "column": "row"} justify={matchesSM ? "center" : undefined} className={classes.howContainer} style={{marginBottom:matchesSM?"12em":"0em"}}>
-              <Grid item style={{ marginLeft: matchesSM ? 0 : "5em", textAlign: matchesSM ? "center" : undefined }}>
+            <Grid container direction={matchesSM? "column": "row"}  className={classes.howContainer} style={{  textAlign: matchesSM ? "center" : undefined}} >
+              <Grid item >
                 <Typography variant="h4">
                   Definitions
                 </Typography>
@@ -401,13 +401,13 @@ export default function LandingPage(props) {
                   Select options for entering work hours
                 </Typography>
               </Grid>
-              <Grid item justifyContent='center'>
+              <Grid item >
                 <img className={classes.howIcon} alt="custom software icon" src={config} />
               </Grid>
             </Grid>
           </Grid>
 
-          <Grid container direction='row' justify={matchesSM ? "center" : "flex-end"} className={classes.howContainer} style={{marginBottom:matchesSM?"12em":"0em"}}>
+          <Grid container direction='row' justify={matchesSM ? "center" : "flex-end"} className={classes.howContainer} >
             <Grid item style={{ textAlign: matchesSM ? "center" : undefined, width: matchesSM ? undefined : "35em" }}>
               <Typography variant="h4">
                 Add Employees
@@ -425,7 +425,7 @@ export default function LandingPage(props) {
           </Grid>
 
           <Grid item>
-            <Grid container direction='row' justify={matchesSM ? "center" : undefined} className={classes.howContainer} style={{marginBottom:matchesSM?"12em":"0em"}}>
+            <Grid container direction='row' justify={matchesSM ? "center" : undefined} className={classes.howContainer} >
               <Grid item style={{ marginLeft: matchesSM ? 0 : "5em", textAlign: matchesSM ? "center" : undefined }}>
                 <Typography variant="h4">
                   Documentation Working Hours
@@ -443,7 +443,7 @@ export default function LandingPage(props) {
             </Grid>
           </Grid>
 
-          <Grid container direction='row' justify={matchesSM ? "center" : "flex-end"} className={classes.howContainer} style={{marginBottom:matchesSM?"12em":"0em"}}>
+          <Grid container direction='row' justify={matchesSM ? "center" : "flex-end"} className={classes.howContainer} >
             <Grid item style={{ textAlign: matchesSM ? "center" : undefined, width: matchesSM ? undefined : "35em" }}>
               <Typography variant="h4">
                 Generate reports
@@ -474,7 +474,7 @@ export default function LandingPage(props) {
         </Grid>
       </Grid>
 
-      <Grid item style={{ marginTop:matchesSM?"10em":"0em" }}>{/*--- how it work 3-4---*/}
+      <Grid item style={{ marginTop:matchesSM?"0em":"0em" }}>{/*--- how it work 3-4---*/}
         <Grid container style={{ height: "45em" }} alignItems="center" direction='row' 
           className={classes.howBackground2}>
         </Grid>
