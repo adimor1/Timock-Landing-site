@@ -9,6 +9,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "react": "^16.8.0",
+    "react-animate-images": "^0.1.4",
     "react-animated-text-content": "^1.0.1",
     "react-dom": "^16.8.0",
     "react-lottie": "^1.2.3",
@@ -48,6 +49,8 @@
     "@emotion/styled": "^11.6.0",
     "@mui/icons-material": "^5.2.4",
     "@mui/material": "^5.2.3",
+    "aphrodite": "^2.4.0",
+    "react-animations": "^1.0.0",
     "react-spring": "^9.4.4"
   }
 }

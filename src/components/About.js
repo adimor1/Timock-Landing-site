@@ -81,11 +81,9 @@ export default function LandingPage(props) {
                             </Typography>
                         </Grid>
                         <Grid style={{marginTop:"3em"}}>
-                        <img className={classes.background} src={team} alt="lightbulb" />
-                            
+                        <img className={classes.background} src={team} alt="lightbulb" />   
                         </Grid>
                     </Grid>
-                   
                 </Grid>
             </Grid>
         </Grid>

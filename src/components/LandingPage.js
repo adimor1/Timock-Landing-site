@@ -156,6 +156,14 @@ const useStyle = makeStyles(theme => ({
   },
 }))
 
+const Mailto = ({ email, subject = '', body = '', children }) => {
+  let params = subject || body ? '?' : '';
+  if (subject) params += `subject=${encodeURIComponent(subject)}`;
+  if (body) params += `${subject ? '&' : ''}body=${encodeURIComponent(body)}`;
+
+  return <a href={`mailto:${email}${params}`}>{children}</a>;
+};
+
 export default function LandingPage(props) {
   const classes = useStyle();
   const theme = useTheme();
@@ -176,9 +184,9 @@ export default function LandingPage(props) {
               Time Tracking <br /> For Your Business
             </Typography>
             <Typography variant='subtitle2' >
-          
-                Free. Newest Technologies. Friendly.
-         
+
+              Free. Newest Technologies. Friendly.
+
             </Typography>
             <Grid item component={"a"} href="https://play.google.com/store/apps" rel="noopener noreferrer" target="_blank">
               <img className={classes.googleplayImage} src={googleplay} alt="lightbulb" />
@@ -216,10 +224,10 @@ export default function LandingPage(props) {
 
 
 
-        <Grid item container direction='row' justify='center' style={{ marginBottom: "3em", marginTop:"5em", padding:"1em"}} >
+        <Grid item container direction='row' justify='center' style={{ marginBottom: "3em", marginTop: "5em", padding: "1em" }} >
 
-          
-        <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em", marginLeft:"0.1em" }} >
+
+          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em", marginLeft: "0.1em" }} >
             <Grid item>
               <Grid container alignItems='center' justify="center">
                 <Card className={classes.technologiesCard}>
@@ -237,7 +245,7 @@ export default function LandingPage(props) {
             </Grid>
 
           </Grid>
-          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em",  marginLeft:"0.1em" }} >
+          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em", marginLeft: "0.1em" }} >
             <Grid item>
               <Grid container alignItems='center' justify="center">
                 <Card className={classes.technologiesCard} >
@@ -257,7 +265,7 @@ export default function LandingPage(props) {
             </Grid>
           </Grid>
 
-          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em",  marginLeft:"0.1em"}} >
+          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em", marginLeft: "0.1em" }} >
             <Grid item>
               <Grid container alignItems='center' justify="center">
                 <Card className={classes.technologiesCard}>
@@ -276,7 +284,7 @@ export default function LandingPage(props) {
             <Grid>
             </Grid>
           </Grid>
-          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em",   marginLeft:"0.1em" }} >
+          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em", marginLeft: "0.1em" }} >
             <Grid item>
               <Grid container alignItems='center' justify="center">
                 <Card className={classes.technologiesCard}>
@@ -294,7 +302,7 @@ export default function LandingPage(props) {
               </Typography>
             </Grid>
           </Grid>
-          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em" ,  marginLeft:"0.1em"}} >
+          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em", marginLeft: "0.1em" }} >
             <Grid item>
               <Grid container alignItems='center' justify="center">
                 <Card className={classes.technologiesCard}>
@@ -314,7 +322,7 @@ export default function LandingPage(props) {
             </Grid>
           </Grid>
 
-          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em" ,  marginLeft:"0.2em"}} >
+          <Grid item container direction='column' md alignItems="center" style={{ maxWidth: "13em", marginLeft: "0.2em" }} >
             <Grid item>
               <Grid container alignItems='center' justify="center">
                 <Card className={classes.technologiesCard}>
@@ -339,8 +347,11 @@ export default function LandingPage(props) {
       {/*--- Buttons Technologies---*/}
       <Grid container justify="center" className={classes.buttonContainer} style={{ marginBottom: "5em" }}>
         <Grid item>
-          <Button component={Link} to="/estimate" className={classes.downloadButton} onClick={() => props.setValue(5)} variant="contained">Free Download</Button>
+          <Button className={classes.downloadButton} onClick={() => props.setValue(5)} variant="contained"
+            component={"a"} href="https://play.google.com/store/apps" rel="noopener noreferrer" target="_blank"
+          >Free Download</Button>
         </Grid>
+
         <Grid item>
           <Button component={Link} to="/technologies" variant="outlined" onClick={() => props.setValue(1)} className={classes.learnButton}>
             <span style={{ marginRight: 10 }}>Learn More</span>
@@ -355,13 +366,13 @@ export default function LandingPage(props) {
 
           <Grid container align='center' style={{ marginTop: "2em", marginBottom: "5em" }} direction='row' justify="center" >
             <Typography variant='h2' >
-            <AnimatedText
-              type="words"
-              animationType="float"
-            >
-              How Does It Work?
-            </AnimatedText>
-             
+              <AnimatedText
+                type="words"
+                animationType="float"
+              >
+                How Does It Work?
+              </AnimatedText>
+
             </Typography>
           </Grid>
 
@@ -433,10 +444,12 @@ export default function LandingPage(props) {
 
           <Grid container justify="center" className={classes.buttonContainer} style={{ marginTop: "4em", marginBottom: matchesSM ? "12em" : "7em" }}>
             <Grid item>
-              <Button component={Link} to="/estimate" className={classes.downloadButton} onClick={() => props.setValue(5)} variant="contained">Free Download</Button>
+              <Button className={classes.downloadButton} onClick={() => props.setValue(5)} variant="contained"
+                component={"a"} href="https://play.google.com/store/apps" rel="noopener noreferrer" target="_blank"
+              >Free Download</Button>
             </Grid>
             <Grid item>
-              <Button component={Link} to="/revolution" variant="outlined" onClick={() => props.setValue(2)} className={classes.learnButton}>
+              <Button component={Link} to="/" variant="outlined" onClick={() => props.setValue(0)} className={classes.learnButton}>
                 <span style={{ marginRight: 10 }}>Watch Video</span>
                 <ButtonArrow width={15} height={15} fill={theme.palette.common.blue} />
               </Button>
@@ -455,20 +468,22 @@ export default function LandingPage(props) {
         <Grid container direction='row' justify="flex-end" style={{ marginTop: matchesSM ? "30em" : "4em" }}>
           <Grid item style={{ margin: "auto" }}>
             <Typography variant="h2" align='center'>
-            <AnimatedText
-              type="words"
-              animationType="float"
-            >
-               Let's Talk!
-            </AnimatedText>
-             
+              <AnimatedText
+                type="words"
+                animationType="float"
+              >
+                Let's Talk!
+              </AnimatedText>
+
             </Typography>
             <Typography variant="subtitle2" align='center'>
               We are here for you  <br /> for any question or request.
             </Typography>
             <Grid direction='row' container justify="center" className={classes.buttonContainer}>
-              <Grid item component={"a"} href="https://play.google.com/store/apps" rel="noopener noreferrer" target="_blank">
-                <img className={classes.mail} src={mail} alt="lightbulb" />
+              <Grid item component={"a"} rel="noopener noreferrer" target="_blank">
+                <Mailto email="moryos@gmail.com" subject="" body="">
+                  <img className={classes.mail} src={mail} alt="lightbulb" />
+                </Mailto>
               </Grid>
               <Grid item component={"a"} href="https://play.google.com/store/apps" rel="noopener noreferrer" target="_blank">
                 <img className={classes.whatsapp} src={whatsapp} alt="lightbulb" />

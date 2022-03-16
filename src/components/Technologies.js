@@ -23,6 +23,9 @@ import background from '../assets/backgroundtec.png';
 import Typical from 'react-typical'
 import AnimatedText from 'react-animated-text-content';
 
+
+
+
 const useStyle = makeStyles(theme => ({
 
     
