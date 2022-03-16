@@ -36,7 +36,7 @@ function ElevationScroll(props) {
 const useStyle = makeStyles(theme => ({
     toolbarMargin: {
         ...theme.mixins.toolbar,
-     
+
         [theme.breakpoints.down("md")]: {
             marginBottom: "2em"
         },
@@ -47,7 +47,7 @@ const useStyle = makeStyles(theme => ({
     logo: {
         height: "3.5em",
         marginLeft: "1em",
-        marginTop:"1em",
+        marginTop: "1em",
         [theme.breakpoints.down("md")]: {
             height: "3em"
         },
@@ -63,26 +63,26 @@ const useStyle = makeStyles(theme => ({
     },
     tabContainer: {
         marginLeft: 'auto',
-        marginTop:"1em",
+        marginTop: "1em",
     },
     tab: {
         ...theme.typography.tab,
         minWidth: 10,
-      
-        marginRight:"1em",
+
+        marginRight: "1em",
         fontSize: "25px",
-                
+
     },
     button: {
         ...theme.typography.estimate,
         borderRadius: "50px",
         marginLeft: "80px",
         marginRight: "25px",
-        fontSize:"25px",
+        fontSize: "25px",
 
-        "&:hover":{
-            backgroundColor:theme.palette.secondary.light
-          }
+        "&:hover": {
+            backgroundColor: theme.palette.secondary.light
+        }
     },
     menu: {
         backgroundColor: theme.palette.common.blue,
@@ -126,8 +126,8 @@ const useStyle = makeStyles(theme => ({
         }
     },
     appbar: {
-        
-        height:"6em",
+
+        height: "6em",
         centerTitle: true,
 
     }
@@ -174,7 +174,7 @@ export default function Header(props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const routes = [
         { name: "Home", link: "/", activeIndex: 0 },
-        { name: "Our Technologies", link: "/technologies", activeIndex:1 },
+        { name: "Our Technologies", link: "/technologies", activeIndex: 1 },
         { name: "About us", link: "/about", activeIndex: 2 },
         { name: "Contact Us", link: "/contact", activeIndex: 3 },
     ];
@@ -186,13 +186,13 @@ export default function Header(props) {
                     if (props.value !== route.activeIndex) {
                         props.setValue(route.activeIndex);
                         if (route.selectedIndex && route.selectedIndex !== props.selectedIndex) {
-                            props. setSelectedIndex(route.selectedIndex)
+                            props.setSelectedIndex(route.selectedIndex)
                         }
                     }
                     break;
-                    case '/estimate':
-                        props.setValue(5);
-                        break;
+                case '/estimate':
+                    props.setValue(5);
+                    break;
                 default:
                     break;
             }
@@ -224,7 +224,7 @@ export default function Header(props) {
 
             <Menu
                 id="simple-menu"
-                
+
                 anchorEl={anchorEl}
                 open={openMenu}
                 onClose={handleClose}
@@ -262,7 +262,7 @@ export default function Header(props) {
                 onClose={() => setOpenDrawer(false)}
                 onOpen={() => setOpenDrawer(true)}
                 classes={{ paper: classes.drawer }}
-        
+
             >
                 <div className={classes.toolbarMargin} />
                 <List disablePadding>
@@ -274,7 +274,7 @@ export default function Header(props) {
                             component={Link}
                             to={route.link}
                             selected={props.value === route.activeIndex}
-                            
+
                             classes={{ selected: classes.drawerItemSelected }}
                             onClick={() => {
                                 setOpenDrawer(false);
@@ -288,7 +288,7 @@ export default function Header(props) {
                             </ListItemText>
                         </ListItem>
                     ))}
-         
+
                 </List>
             </SwipeableDrawer>
             <IconButton className={classes.drawerIconContainer}
@@ -302,18 +302,18 @@ export default function Header(props) {
     return (
         <React.Fragment>
 
-                <AppBar position="fixed" className={classes.appbar} color="white">
-                    <Toolbar disableGutters>
-                        <Button disableRipple component={Link} to='/' onClick={() => props.setValue(0)} className={classes.logoContainer}>
+            <AppBar position="fixed" className={classes.appbar} color="white">
+                <Toolbar disableGutters>
+                    <Button disableRipple component={Link} to='/' onClick={() => props.setValue(0)} className={classes.logoContainer}>
                         <img
-                                alt="company logo"
-                                className={classes.logo}
-                                src={logo} />
-                        </Button>
-                        {matches ? drawer : tabs}
-                    </Toolbar>
-                </AppBar>
-       
+                            alt="company logo"
+                            className={classes.logo}
+                            src={logo} />
+                    </Button>
+                    {matches ? drawer : tabs}
+                </Toolbar>
+            </AppBar>
+
             <div className={classes.toolbarMargin} />
         </React.Fragment>
     )

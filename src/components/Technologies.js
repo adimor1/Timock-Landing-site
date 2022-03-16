@@ -1,34 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid'
-import { Button } from '@material-ui/core';
-import ButtonArrow from './ui/ButtonArrow';
 import { Typography } from '@material-ui/core';
 import { useMediaQuery } from '@material-ui/core';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-
-import { Link } from 'react-router-dom';
-
-import nfc from '../assets/nfc.png';
 import qr from '../assets/qr.png';
 import faceid from '../assets/faceid.png';
 import gps from '../assets/gps.png';
 import wifi from '../assets/WIFI.png';
 import basic from '../assets/basic.png';
 import hce from '../assets/hce.png';
-import touchid from '../assets/touchid.png';
-import right from '../assets/right-red.png';
 import background from '../assets/backgroundtec.png';
-import Typical from 'react-typical'
 import AnimatedText from 'react-animated-text-content';
 
-
-
-
 const useStyle = makeStyles(theme => ({
-
-    
     specialtext: {
         fontFamily: "Pacifico",
         fontSize: "6rem",
@@ -74,7 +58,7 @@ export default function LandingPage(props) {
             <Grid item>{/*--- How it work 1-2---*/}
                 <Grid container alignItems="center" direction='row'
                     className={classes.background}>
-                    <Grid container align='center' style={{ marginTop: "5em", marginRight: "3em", marginLeft: "3em", marginBottom:"5em" }} direction='row' justify="center" >
+                    <Grid container align='center' style={{ marginTop: "5em", marginRight: "3em", marginLeft: "3em", marginBottom: "5em" }} direction='row' justify="center" >
                         <Typography variant='h2' >
 
                             <AnimatedText
@@ -171,10 +155,10 @@ export default function LandingPage(props) {
                                 WIFI
                             </Typography>
                             <Typography variant="subtitle2" className={classes.subtitle}>
-                            You can decide that attendance reporting will be done through the WIFI of the workplace.
-                                    Attendance Administrator will record in the app the IP addresses of your WIFI in the workplace.
-                                    When the employee registers a presence, the system will recognize his IP address and indicate that this employee has registered an office presence and his IP address.
-                                    This option will only be possible if you enter the WIFI IP addresses.
+                                You can decide that attendance reporting will be done through the WIFI of the workplace.
+                                Attendance Administrator will record in the app the IP addresses of your WIFI in the workplace.
+                                When the employee registers a presence, the system will recognize his IP address and indicate that this employee has registered an office presence and his IP address.
+                                This option will only be possible if you enter the WIFI IP addresses.
                             </Typography>
                         </Grid>
                         <Grid item style={{ marginRight: matchesSM ? 0 : "15em" }}>
@@ -192,7 +176,7 @@ export default function LandingPage(props) {
                                     Basic
                                 </Typography>
                                 <Typography variant="subtitle2">
-                                You can register attendance without any location  technological but on trust in the employee.
+                                    You can register attendance without any location  technological but on trust in the employee.
                                 </Typography>
                             </Grid>
                             <Grid item>
@@ -209,14 +193,14 @@ export default function LandingPage(props) {
                                 HCE
                             </Typography>
                             <Typography variant="subtitle2" className={classes.subtitle}>
-                            HCE (Host card emulation)  is base on NFC technology.
-                                    Every employee who installs the app turns his phone into an attendance card.
-                                    First option -  You can decide that the phones of the supervisor or team leader or secretary will be  attendance card (HCE) reader on demand.
-                                    When the employee comes to work he attaches the back of his phone to the phone of the supervisor,
-                                    team leader or secretary and thus attendance is recorded. The system administrator will open the reader option in the list of employees.
-                                    Second option - You can take an old or cheap phone and turn it into  a 24/7 attendance card reader.
-                                    This option simulates a time attendance system which is hung on the wall. Place the phone with its back up and the employees
-                                    will attach their phone to the back of this device and thus record attendance.
+                                HCE (Host card emulation)  is base on NFC technology.
+                                Every employee who installs the app turns his phone into an attendance card.
+                                First option -  You can decide that the phones of the supervisor or team leader or secretary will be  attendance card (HCE) reader on demand.
+                                When the employee comes to work he attaches the back of his phone to the phone of the supervisor,
+                                team leader or secretary and thus attendance is recorded. The system administrator will open the reader option in the list of employees.
+                                Second option - You can take an old or cheap phone and turn it into  a 24/7 attendance card reader.
+                                This option simulates a time attendance system which is hung on the wall. Place the phone with its back up and the employees
+                                will attach their phone to the back of this device and thus record attendance.
                             </Typography>
                         </Grid>
                         <Grid item style={{ marginRight: matchesSM ? 0 : "15em" }}>

@@ -1,21 +1,11 @@
 import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid'
-import { Button } from '@material-ui/core';
-import ButtonArrow from './ui/ButtonArrow';
 import { Typography } from '@material-ui/core';
 import { useMediaQuery } from '@material-ui/core';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import backgroundbg from '../assets/backgroundbg.png';
-import { Link } from 'react-router-dom';
-
 import right from '../assets/right-red.png';
-import howBackground from '../assets/background3.png';
-import howBackground2 from '../assets/background4.png';
 import megaphone from '../assets/megaphone.png';
 import mail from '../assets/mail.png';
-import whatsapp from '../assets/whatsapp.png';
 import AnimatedText from 'react-animated-text-content';
 
 const useStyle = makeStyles(theme => ({
@@ -36,12 +26,6 @@ const useStyle = makeStyles(theme => ({
             height: "28em",
             width: "28em",
         }
-    },
-    whatsapp: {
-        height: "8em",
-        width: "8em",
-        marginTop: "1em",
-        marginLeft: "3em"
     },
     mail: {
         height: "8em",
@@ -84,13 +68,10 @@ export default function LandingPage(props) {
                             We are here for you  <br /> for any question or request.
                         </Typography>
                         <Grid direction='row' container justify="center" className={classes.buttonContainer}>
-                            <Grid item component={"a"}  rel="noopener noreferrer" target="_blank">
+                            <Grid item component={"a"} rel="noopener noreferrer" target="_blank">
                                 <Mailto email="moryos@gmail.com" subject="" body="">
-                                <img className={classes.mail} src={mail} alt="lightbulb" />
+                                    <img className={classes.mail} src={mail} alt="lightbulb" />
                                 </Mailto>
-                            </Grid>
-                            <Grid item component={"a"} href="https://play.google.com/store/apps" rel="noopener noreferrer" target="_blank">
-                                <img className={classes.whatsapp} src={whatsapp} alt="lightbulb" />
                             </Grid>
                         </Grid>
                     </Grid>

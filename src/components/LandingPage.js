@@ -13,10 +13,8 @@ import cash from '../assets/green.jpg';
 import orange from '../assets/orange.jpg';
 import blue from '../assets/blue.jpg';
 import red from '../assets/red.jpg';
-import purple from '../assets/purple.jpg';
 import pink from '../assets/pink.jpg';
 import yellow from '../assets/yellow.jpg';
-import gray from '../assets/gray.png';
 import report from '../assets/report.png';
 import addwork from '../assets/addwork.png';
 import config from '../assets/config.png';
@@ -27,16 +25,13 @@ import howBackground from '../assets/background3.png';
 import howBackground2 from '../assets/background4.png';
 import megaphone from '../assets/megaphone.png';
 import mail from '../assets/mail.png';
-import whatsapp from '../assets/whatsapp.png';
 import googleplay from '../assets/googleplay.png';
 import FaceIcon from '@mui/icons-material/Face';
 import QrCodeScannerIcon from '@mui/icons-material/QrCodeScanner';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-import NfcIcon from '@mui/icons-material/Nfc';
 import WifiIcon from '@mui/icons-material/Wifi';
 import ModeEditIcon from '@mui/icons-material/ModeEdit';
 import StyleIcon from '@mui/icons-material/Style';
-import TouchAppIcon from '@mui/icons-material/TouchApp';
 import AnimatedText from 'react-animated-text-content';
 
 const useStyle = makeStyles(theme => ({
@@ -485,9 +480,7 @@ export default function LandingPage(props) {
                   <img className={classes.mail} src={mail} alt="lightbulb" />
                 </Mailto>
               </Grid>
-              <Grid item component={"a"} href="https://play.google.com/store/apps" rel="noopener noreferrer" target="_blank">
-                <img className={classes.whatsapp} src={whatsapp} alt="lightbulb" />
-              </Grid>
+
             </Grid>
           </Grid>
           <Grid item>

@@ -8,7 +8,6 @@ import LandingPage from './LandingPage';
 import Technologies from './Technologies';
 import About from './About';
 import Contact from './Contact';
-import ReactDOM from "react-dom";
 import ScrollToTop from './ScrollToTop';
 
 function App() {

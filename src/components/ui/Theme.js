@@ -2,25 +2,24 @@ import { createTheme } from "@material-ui/core";
 
 
 const arcBlue = "#3be2ab";
-const arcOrange= "#202124";
-const arcGrey="#868686";
-
+const arcOrange = "#202124";
+const arcGrey = "#868686";
 export default createTheme({
-    palette:{
-        common:{
-            blue:`${arcBlue}`,
-            orange:`${arcOrange}`,
-           
+    palette: {
+        common: {
+            blue: `${arcBlue}`,
+            orange: `${arcOrange}`,
+
         },
-        primary:{
-            main:`${arcBlue}`,
+        primary: {
+            main: `${arcBlue}`,
         },
-        secondary:{
-            main:`${arcOrange}`,
+        secondary: {
+            main: `${arcOrange}`,
         },
     },
-    typography:{
-        tab:{
+    typography: {
+        tab: {
             fontFamily: "Raleway",
             textTransform: "none",
             fontWeight: 700,
@@ -30,39 +29,39 @@ export default createTheme({
             fontFamily: "Pacifico",
             fontSize: "1rem",
             textTransform: "none",
-            color:"white"
+            color: "white"
         },
-        h2:{
-            fontFamily:"Raleway", 
-            fontWeight:700, 
+        h2: {
+            fontFamily: "Raleway",
+            fontWeight: 700,
             fontSize: "3.5rem",
             color: "black",
-            lineHeight:1.5
+            lineHeight: 1.5
         },
-        h5:{
-            fontFamily:"Raleway", 
+        h5: {
+            fontFamily: "Raleway",
             fontSize: "1.7rem",
             color: arcGrey,
             fontWeight: 700
         },
-        subtitle2:{
+        subtitle2: {
             fontSize: "2rem",
             color: arcGrey,
             fontWeight: 300
         },
-        learnButton:{
+        learnButton: {
             borderColor: arcBlue,
             color: arcBlue,
-            borderWidth:2,
+            borderWidth: 2,
             textTransform: "none",
-            borderRadius:50,
-            fontFamily:"Roboto",
-            fontWeight:"bold",
-          },
-          body1:{
-             fontSize:"1.25em",
-             color: arcGrey,
-             fontWeight: 300
-          }
+            borderRadius: 50,
+            fontFamily: "Roboto",
+            fontWeight: "bold",
+        },
+        body1: {
+            fontSize: "1.25em",
+            color: arcGrey,
+            fontWeight: 300
+        }
     }
 })

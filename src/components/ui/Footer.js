@@ -39,8 +39,8 @@ export default function Footer(props) {
     return <footer className={classes.footer}>
 
         <Grid direction="row">
-            <Grid  container justifyContent="center" className={classes.copyright} >
-                <Typography style={{ marginTop: "2.5em", marginRight:"0.5em"}}>
+            <Grid container justifyContent="center" className={classes.copyright} >
+                <Typography style={{ marginTop: "2.5em", marginRight: "0.5em" }}>
                     © 2022 MoreSolutions - Timock
                 </Typography>
             </Grid>
