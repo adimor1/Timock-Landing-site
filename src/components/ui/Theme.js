@@ -47,7 +47,8 @@ export default createTheme({
         subtitle2: {
             fontSize: "2rem",
             color: arcGrey,
-            fontWeight: 300
+            fontWeight: 400,
+            fontFamily:"Raleway"
         },
         learnButton: {
             borderColor: arcBlue,
@@ -55,13 +56,14 @@ export default createTheme({
             borderWidth: 2,
             textTransform: "none",
             borderRadius: 50,
-            fontFamily: "Roboto",
+            fontFamily: "Raleway",
             fontWeight: "bold",
         },
         body1: {
             fontSize: "1.25em",
             color: arcGrey,
-            fontWeight: 300
+            fontWeight: 300,
+            fontFamily:"Raleway"
         }
     }
 })
