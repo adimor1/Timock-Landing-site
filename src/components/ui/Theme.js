@@ -56,14 +56,13 @@ export default createTheme({
             borderWidth: 2,
             textTransform: "none",
             borderRadius: 50,
-            fontFamily: "Raleway",
+            fontFamily: "Roboto",
             fontWeight: "bold",
         },
         body1: {
             fontSize: "1.25em",
             color: arcGrey,
-            fontWeight: 300,
-            fontFamily:"Raleway"
+            fontWeight: 300
         }
     }
 })
